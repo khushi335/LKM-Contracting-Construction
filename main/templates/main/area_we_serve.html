@@ -1,0 +1,114 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Page Header -->
+<div class="container-fluid page-header py-5 mb-5" style="background: linear-gradient(rgba(18, 20, 22, 0.7), rgba(18, 20, 22, 0.7)), url('{% static 'img/areas-banner.jpg' %}') center center no-repeat; background-size: cover;">
+    <div class="container py-5 text-center">
+        <h1 class="display-1 text-white text-uppercase fw-bold mb-0">Areas We Serve</h1>
+        <div class="d-inline-flex align-items-center text-white mt-3">
+            <p class="m-0 text-uppercase"><a class="text-white" href="{% url 'index' %}">Home</a></p>
+            <i class="fa fa-angle-double-right pt-1 px-3"></i>
+            <p class="m-0 text-uppercase text-bronze">Service Areas</p>
+        </div>
+    </div>
+</div>
+
+<!-- Intro: The NY Experience -->
+<section class="container py-6">
+    <div class="row align-items-center">
+        <div class="col-lg-5 mb-4 mb-lg-0">
+            <h6 class="text-bronze text-uppercase fw-bold mb-3">Service Excellence</h6>
+            <h2 class="display-5 text-uppercase fw-bold mb-4">Building Dreams <br><span class="text-outline-dark">Across New York</span></h2>
+            <p class="text-muted border-start border-4 border-bronze ps-4">
+                From the skyline of Manhattan to the residential streets of Long Island, LKM provides premier construction and contracting services tailored to the unique architecture of New York.
+            </p>
+        </div>
+        <div class="col-lg-7">
+            <div class="region-card shadow-sm">
+                <div class="region-header text-white">
+                    <h4 class="text-uppercase fw-bold mb-1">NY Locations</h4>
+                    <span class="text-bronze small fw-bold">The Five Boroughs & Beyond</span>
+                </div>
+                <div class="p-4">
+                    <div class="location-grid">
+                        <div class="location-badge">Queens</div>
+                        <div class="location-badge">Brooklyn</div>
+                        <div class="location-badge">Long Island</div>
+                        <div class="location-badge">Bronx</div>
+                        <div class="location-badge">Manhattan</div>
+                        <div class="location-badge">Astoria</div>
+                        <div class="location-badge">Garden City</div>
+                        <div class="location-badge">New Hyde Park</div>
+                        <div class="location-badge">Floral Park</div>
+                        <div class="location-badge">Elmont</div>
+                        <div class="location-badge">Manhasset</div>
+                        <div class="location-badge">Roslyn</div>
+                        <div class="location-badge">Maspeth</div>
+                        <div class="location-badge">Sunnyside</div>
+                        <div class="location-badge">Franklin Square</div>
+                        <div class="location-badge">Great Neck</div>
+                        <div class="location-badge">Ridgewood</div>
+                        <div class="location-badge">Glendale</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Separator -->
+<div class="container"><hr class="text-muted opacity-25"></div>
+
+<!-- Intro: The NJ Experience -->
+<section class="container py-6">
+    <div class="row align-items-center flex-lg-row-reverse">
+        <div class="col-lg-5 mb-4 mb-lg-0 text-lg-end">
+            <h6 class="text-bronze text-uppercase fw-bold mb-3">Trusted Partners</h6>
+            <h2 class="display-5 text-uppercase fw-bold mb-4">New Jersey <br><span class="text-outline-dark">Operations</span></h2>
+            <p class="text-muted border-end border-4 border-bronze pe-4">
+                Specializing in high-quality renovations and custom builds throughout Northern and Central Jersey. We bring a commitment to excellence to every New Jersey zip code we serve.
+            </p>
+        </div>
+        <div class="col-lg-7">
+            <div class="region-card shadow-sm">
+                <div class="region-header text-white">
+                    <h4 class="text-uppercase fw-bold mb-1">NJ Locations</h4>
+                    <span class="text-bronze small fw-bold">Northern & Central Jersey</span>
+                </div>
+                <div class="p-4">
+                    <div class="location-grid">
+                        <div class="location-badge">Newark</div>
+                        <div class="location-badge">Jersey City</div>
+                        <div class="location-badge">Paterson</div>
+                        <div class="location-badge">Lakewood</div>
+                        <div class="location-badge">Elizabeth</div>
+                        <div class="location-badge">Edison</div>
+                        <div class="location-badge">Woodbridge</div>
+                        <div class="location-badge">Toms River</div>
+                        <div class="location-badge">Hamilton</div>
+                        <div class="location-badge">Trenton</div>
+                        <div class="location-badge">Clifton</div>
+                        <div class="location-badge">Cherry Hill</div>
+                        <div class="location-badge">Brick</div>
+                        <div class="location-badge">Camden</div>
+                        <div class="location-badge">Bayonne</div>
+                        <div class="location-badge">East Orange</div>
+                        <div class="location-badge">Passaic</div>
+                        <div class="location-badge">Franklin</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Professional CTA -->
+<div class="container-fluid py-6 bg-platinum">
+    <div class="container text-center">
+        <h2 class="text-uppercase fw-bold mb-3">Expanding Our <span class="text-bronze">Horizon</span></h2>
+        <p class="mx-auto mb-5 text-muted" style="max-width: 600px;">Don't see your specific township? We are constantly expanding. Reach out to our project managers to discuss availability in your area.</p>
+        <a href="{% url 'contact' %}" class="btn btn-dark btn-lg px-5 py-3 text-uppercase fw-bold" style="letter-spacing: 2px;">Consult an Expert</a>
+    </div>
+</div>
+{% endblock %}

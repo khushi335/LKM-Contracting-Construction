@@ -1,0 +1,260 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5" style="background: linear-gradient(rgba(18, 20, 22, 0.7), rgba(18, 20, 22, 0.7)), url('{% static 'img/nj-skyline-banner.jpg' %}') center center no-repeat; background-size: cover;">
+    <div class="container py-5 text-center">
+        <h1 class="display-1 text-white text-uppercase fw-bold mb-0">NJ Portfolio</h1>
+        <div class="d-inline-flex align-items-center text-white mt-3">
+            <p class="m-0 text-uppercase"><a class="text-white" href="{% url 'index' %}">Home</a></p>
+            <i class="fa fa-angle-double-right pt-1 px-3"></i>
+            <p class="m-0 text-uppercase text-bronze">New Jersey Projects</p>
+        </div>
+    </div>
+</div>
+
+<!-- Project Grid Section -->
+<div class="container-fluid py-6 px-5">
+    <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+        <h6 class="text-bronze text-uppercase fw-bold mb-3" style="letter-spacing: 5px;">Built with Trust</h6>
+        <h1 class="display-5 text-uppercase mb-0">New Jersey <span class="text-outline-dark">Excellence</span></h1>
+    </div>
+
+    <div class="row g-4">
+        <!-- Newark: General Construction -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/newark-construction.jpg' %}" alt="General Construction Newark" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">General Construction</span>
+                        <h5 class="text-white mb-0">Newark, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Jersey City: Home Remodeling -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/jc-remodeling.jpg' %}" alt="Home Remodeling Jersey City" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Home Remodeling</span>
+                        <h5 class="text-white mb-0">Jersey City, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Paterson: Renovation -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/paterson-renovation.jpg' %}" alt="Renovation Paterson" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Renovation</span>
+                        <h5 class="text-white mb-0">Paterson, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Elizabeth: Exterior Painting -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/elizabeth-painting.jpg' %}" alt="Exterior Painting Elizabeth" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Exterior Painting</span>
+                        <h5 class="text-white mb-0">Elizabeth, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Edison: Framing -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/edison-framing.jpg' %}" alt="Framing Edison" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Framing</span>
+                        <h5 class="text-white mb-0">Edison, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Woodbridge: Brick Pointing -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/woodbridge-brick.jpg' %}" alt="Brick Pointing Woodbridge" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Brick Pointing</span>
+                        <h5 class="text-white mb-0">Woodbridge, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Toms River: Waterproofing -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/toms-river-water.jpg' %}" alt="Waterproofing Toms River" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Waterproofing</span>
+                        <h5 class="text-white mb-0">Toms River, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Hamilton: Decks -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/hamilton-decks.jpg' %}" alt="Decks Hamilton" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Decks</span>
+                        <h5 class="text-white mb-0">Hamilton Township, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Trenton: Window Doors -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/trenton-windows.jpg' %}" alt="Window Doors Trenton" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Window & Doors</span>
+                        <h5 class="text-white mb-0">Trenton, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Clifton: Sidewalk -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/clifton-sidewalk.jpg' %}" alt="Sidewalk Clifton" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Sidewalk</span>
+                        <h5 class="text-white mb-0">Clifton, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cherry Hill: Stucco -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/cherry-hill-stucco.jpg' %}" alt="Stucco Cherry Hill" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Stucco</span>
+                        <h5 class="text-white mb-0">Cherry Hill, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Brick: Siding -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/brick-siding.jpg' %}" alt="Siding Brick" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Siding</span>
+                        <h5 class="text-white mb-0">Brick, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Camden: Flooring -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/camden-flooring.jpg' %}" alt="Flooring Camden" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Flooring</span>
+                        <h5 class="text-white mb-0">Camden, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Bayonne: Electricity -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/ayonne-electric.jpg' %}" alt="Electricity Bayonne" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Electricity</span>
+                        <h5 class="text-white mb-0">Bayonne, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- East Orange: Carpentry -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/eo-carpentry.jpg' %}" alt="Carpentry East Orange" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Carpentry</span>
+                        <h5 class="text-white mb-0">East Orange, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Passaic: Roofing -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/passaic-roofing.jpg' %}" alt="Roofing Passaic" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Roofing</span>
+                        <h5 class="text-white mb-0">Passaic, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Franklin: Masonry -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/franklin-masonry.jpg' %}" alt="Masonry Franklin" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Masonry</span>
+                        <h5 class="text-white mb-0">Franklin Township, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Lakewood: Concrete -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="nj-project-card">
+                <img src="{% static 'img/lakewood-concrete.jpg' %}" alt="Concrete Lakewood" class="img-fluid">
+                <div class="nj-project-overlay">
+                    <div class="nj-project-info">
+                        <span class="service-tag">Concrete</span>
+                        <h5 class="text-white mb-0">Lakewood, NJ</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

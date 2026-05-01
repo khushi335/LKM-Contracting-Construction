@@ -1,0 +1,1056 @@
+:root {
+    --obsidian: #121416;
+    --bronze: #C59D5F; /* Refined Gold/Bronze */
+    --platinum: #E2E8F0;
+    --slate: #2D3748;
+    --white: #FFFFFF;
+    /*--color: #FFBF00;*/
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    color: var(--slate);
+    overflow-x: hidden;
+}
+
+h1, h2, h3, .btn-bronze {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* --- Navbar Dropdown Professional Styling --- */
+
+/* Enable Hover on Desktop */
+@media (min-width: 992px) {
+    .nav-item.dropdown:hover .dropdown-menu {
+        display: block;
+        margin-top: 0; /* Prevents a gap that causes the menu to close */
+    }
+}
+
+/* Dropdown Menu Styling */
+.dropdown-menu {
+    background-color: var(--obsidian); /* Matches your brand colors */
+    border-top: 3px solid var(--bronze) !important;
+    border-radius: 0 0 4px 4px;
+    padding: 0;
+    min-width: 200px;
+}
+
+.dropdown-item {
+    color: #ffffff;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+}
+
+.dropdown-item:hover {
+    background-color: var(--bronze);
+    color: #ffffff;
+    padding-left: 1.5rem; /* Subtle sliding effect on hover */
+}
+
+.dropdown-divider {
+    border-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Simple Animation */
+.animate {
+    animation-duration: 0.3s;
+    animation-fill-mode: both;
+}
+
+@keyframes slideIn {
+    0% {
+        transform: translateY(10px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.slideIn {
+    animation-name: slideIn;
+}
+
+
+
+
+
+/* --- Dropdown Separation & Positioning --- */
+
+/* 1. Add a 'Safe Gap' so the menu doesn't touch the Navbar directly */
+.nav-item.dropdown .dropdown-menu {
+    margin-top: 15px !important; /* Visual gap */
+    border-top: 3px solid var(--bronze) !important;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3) !important;
+}
+
+/* 2. Create an invisible 'bridge' so the menu doesn't close when moving the mouse to the gap */
+.nav-item.dropdown::after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 20px;
+    bottom: -20px;
+    left: 0;
+    display: none;
+}
+
+.nav-item.dropdown:hover::after {
+    display: block;
+}
+
+/* 3. Ensure the Mega Menu doesn't touch the screen edges */
+@media (min-width: 992px) {
+    .dropdown-mega .dropdown-menu {
+        left: 50% !important;
+        transform: translateX(-50%) translateY(0); /* Centers the menu under the 'Expertise' link */
+        width: auto;
+        min-width: 650px;
+    }
+}
+
+/* 4. Column Spacing: Ensure text inside doesn't touch the column borders */
+.mega-menu-content .col-md-4 {
+    padding: 0 25px;
+    border-right: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.mega-menu-content .col-md-4:last-child {
+    border-right: none;
+}
+
+
+
+/* --- Navigation & Top Bar --- */
+.top-bar {
+    background-color: var(--obsidian);
+    color: var(--white);
+    font-size: 11px; /* Slightly smaller to ensure no wrapping on smaller laptops */
+    padding: 12px 0;
+    border-bottom: 1px solid rgba(197, 157, 95, 0.3);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.top-bar span, .top-bar a {
+    transition: color 0.3s ease;
+}
+
+.top-bar a:hover {
+    color: var(--bronze) !important;
+}
+
+/* Vertical Separators */
+.border-end-light {
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Ensure icons have consistent color */
+.text-bronze {
+    color: #c59d5f !important;
+}
+
+
+
+
+
+
+.navbar {
+    background: var(--white);
+    padding: 20px 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+}
+
+.main-logo { height: 65px; }
+
+.nav-link {
+    font-weight: 600;
+    color: var(--obsidian) !important;
+    margin: 0 15px;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.nav-link:hover { color: var(--bronze) !important; }
+
+/* --- The Bronze Button --- */
+.btn-bronze {
+    background: var(--bronze);
+    color: var(--white);
+    border-radius: 0;
+    padding: 12px 28px;
+    font-weight: 700;
+    font-size: 13px;
+    border: none;
+    transition: all 0.4s ease;
+}
+
+.btn-bronze:hover {
+    background: var(--obsidian);
+    color: var(--bronze);
+    box-shadow: 0 8px 15px rgba(0,0,0,0.1);
+}
+
+/* --- Hero/Carousel Design --- */
+.carousel-item {
+    height: 90vh;
+    background-color: var(--obsidian);
+}
+
+.carousel-item img {
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.5;
+    filter: grayscale(30%);
+}
+
+.carousel-caption {
+    bottom: 25% !important;
+    text-align: left;
+    max-width: 800px;
+    left: 10% !important;
+}
+
+.carousel-caption h1 {
+    font-size: 4.5rem;
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 20px;
+}
+
+.caption-label {
+    display: inline-block;
+    background: var(--bronze);
+    color: white;
+    padding: 5px 15px;
+    font-size: 14px;
+    font-weight: 700;
+    margin-bottom: 15px;
+}
+
+/* Trust Ribbon Styling */
+.trust-ribbon {
+    position: absolute;
+    bottom: 40px;
+    right: 5%;
+    z-index: 10;
+    gap: 20px;
+}
+
+.trust-item {
+    background: rgba(18, 20, 22, 0.85); /* Obsidian with transparency */
+    border-left: 3px solid var(--bronze);
+    padding: 15px 25px;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    backdrop-filter: blur(5px);
+    transition: 0.3s;
+}
+
+.trust-item:hover {
+    transform: translateY(-5px);
+    background: var(--bronze);
+}
+
+.trust-item i {
+    font-size: 1.5rem;
+    margin-right: 15px;
+    color: var(--bronze);
+}
+
+.trust-item:hover i, .trust-item:hover span {
+    color: #fff;
+}
+
+.trust-item span {
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+/* Image Polish */
+.hero-img {
+    height: 100vh;
+    object-fit: cover;
+    filter: brightness(0.4) contrast(1.1); /* Makes the gold/white text pop much more */
+}
+
+/* Caption Refinement */
+.carousel-caption {
+    top: 50%;
+    transform: translateY(-50%);
+    bottom: auto !important;
+    text-align: left;
+    padding-left: 5%;
+}
+
+.content-box {
+    animation: fadeInUp 1s ease;
+}
+
+/* Custom Nav Icons */
+.custom-nav-icon {
+    width: 50px;
+    height: 50px;
+    border: 1px solid rgba(255,255,255,0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.3s;
+    color: #fff;
+}
+
+.custom-nav-icon:hover {
+    background: var(--bronze);
+    border-color: var(--bronze);
+}
+
+/* Responsive fixes */
+@media (max-width: 768px) {
+    .carousel-caption {
+        text-align: center;
+        padding-left: 0;
+        width: 100%;
+    }
+    .display-1 { font-size: 3rem; }
+    .hero-img { height: 70vh; }
+}
+
+
+
+
+
+
+
+/* --- Brand Block Custom Styles --- */
+.bg-obsidian {
+    background-color: #121416; /* Deep professional black/grey */
+}
+
+.brand-block-logo {
+    max-height: 100px;
+    filter: brightness(0) invert(1); /* Forces logo to white if it's dark */
+    transition: 0.3s;
+}
+
+.brand-block-logo:hover {
+    transform: scale(1.05);
+}
+
+.border-start-lg {
+    border-left: 1px solid rgba(197, 157, 95, 0.3);
+}
+
+.border-end-lg {
+    border-right: 1px solid rgba(197, 157, 95, 0.3);
+}
+
+.qr-wrapper {
+    border: 4px solid var(--bronze);
+    border-radius: 8px;
+    transition: 0.4s;
+}
+
+.qr-wrapper:hover {
+    transform: rotate(3deg);
+    border-color: #fff;
+}
+
+.qr-code {
+    width: 120px;
+    height: 120px;
+}
+
+/* Responsiveness for Borders */
+@media (max-width: 991px) {
+    .border-start-lg, .border-end-lg {
+        border: none;
+        padding: 20px 0;
+    }
+    .brand-block-logo {
+        max-height: 80px;
+        margin-bottom: 20px;
+    }
+}
+
+
+
+
+
+
+/* About Typography */
+.lead-text {
+    font-size: 1.1rem;
+    color: #555;
+    line-height: 1.8;
+}
+
+/* Icon Box Styling */
+.icon-box-small {
+    width: 45px;
+    height: 45px;
+    background: var(--obsidian);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 18px;
+    transition: 0.3s;
+}
+
+.icon-box-small:hover {
+    background: var(--bronze);
+}
+
+.icon-box-small i {
+    transition: 0.3s;
+}
+
+.icon-box-small:hover i {
+    color: white !important;
+}
+
+/* Experience Badge */
+.experience-badge {
+    position: absolute;
+    bottom: -30px;
+    left: -30px;
+    min-width: 180px;
+    z-index: 5;
+}
+
+/* Decorative Background Frame */
+.image-frame {
+    position: absolute;
+    top: 30px;
+    right: -30px;
+    width: 100%;
+    height: 100%;
+    border: 10px solid var(--bronze);
+    z-index: -1;
+}
+
+/* Animation for the "Trusted Partner" tagline */
+.border-bronze {
+    border-color: var(--bronze) !important;
+}
+
+@media (max-width: 991px) {
+    .experience-badge {
+        position: relative;
+        bottom: 0;
+        left: 0;
+        margin-top: 20px;
+    }
+    .image-frame {
+        display: none;
+    }
+}
+
+
+
+
+
+/* --- Service Cards Evolution --- */
+.service-card {
+    border: none;
+    background: #fff;
+    transition: 0.5s;
+    position: relative;
+    overflow: hidden;
+    height: 100%;
+}
+
+.service-img-wrapper {
+    overflow: hidden;
+    height: 250px;
+}
+
+.service-img-wrapper img {
+    transition: 0.5s;
+    object-fit: cover;
+}
+
+.service-content {
+    padding: 30px;
+    background: #fff;
+    position: relative;
+}
+
+.service-icon-box {
+    position: absolute;
+    top: -35px;
+    right: 30px;
+    width: 70px;
+    height: 70px;
+    background: var(--obsidian);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+    transition: 0.5s;
+}
+
+/* Hover Effects */
+.service-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+.service-card:hover .service-img-wrapper img {
+    transform: scale(1.1);
+}
+
+.service-card:hover .service-icon-box {
+    background: var(--bronze);
+}
+
+.service-card::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 4px;
+    background: var(--bronze);
+    transition: 0.5s;
+}
+
+.service-card:hover::after { 
+    width: 100%; 
+}
+
+/* Typography Polish */
+.service-content h4 {
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: var(--obsidian);
+}
+
+.service-content p {
+    font-size: 0.95rem;
+    color: #666;
+    margin-bottom: 0;
+}
+
+
+
+
+
+
+
+/* --- Global Architectural Variables --- */
+:root {
+    --obsidian: #121416;
+    --bronze: #C59D5F;
+    --platinum: #F8F9FA;
+}
+
+/* Typography Utility */
+.text-outline {
+    -webkit-text-stroke: 1px var(--bronze);
+    color: transparent;
+}
+
+/* --- Premium Trust Cards --- */
+.premium-trust-card {
+    padding: 60px 40px;
+    background: #fff;
+    transition: 0.5s all ease;
+    position: relative;
+    height: 100%;
+}
+
+.card-number {
+    position: absolute;
+    top: 30px;
+    right: 40px;
+    font-size: 4rem;
+    font-weight: 900;
+    color: rgba(0,0,0,0.03);
+    line-height: 1;
+    transition: 0.5s;
+}
+
+.card-icon-wrap {
+    width: 50px;
+    height: 50px;
+    color: var(--bronze);
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    transition: 0.5s;
+}
+
+.premium-trust-card h5 {
+    letter-spacing: 1px;
+    line-height: 1.4;
+    margin-bottom: 20px;
+    color: var(--obsidian);
+}
+
+.premium-trust-card p {
+    font-size: 0.9rem;
+    color: #777;
+    margin-bottom: 0;
+}
+
+/* Hover States */
+.premium-trust-card:hover {
+    background: var(--obsidian);
+}
+
+.premium-trust-card:hover .card-icon-wrap {
+    color: #fff;
+    transform: translateY(-5px);
+}
+
+.premium-trust-card:hover h5 {
+    color: #fff;
+}
+
+.premium-trust-card:hover p {
+    color: rgba(255,255,255,0.7);
+}
+
+.premium-trust-card:hover .card-number {
+    color: var(--bronze);
+    opacity: 0.1;
+}
+
+/* --- Floating Stats Bar --- */
+.stats-floating-bar {
+    background: var(--obsidian);
+    color: #fff;
+    margin-top: -30px;
+    position: relative;
+    z-index: 10;
+    border-radius: 4px;
+}
+
+.border-end-light {
+    border-right: 1px solid rgba(255,255,255,0.1);
+}
+
+/* Responsive Fixes */
+@media (max-width: 991px) {
+    .border-end-lg { border: none !important; }
+    .stats-floating-bar { margin-top: 30px; }
+    .premium-trust-card { padding: 40px 30px; }
+}
+
+
+
+
+/* --- Portfolio & Project Grid Styles --- */
+
+/* 1. Background & Section Spacing */
+.bg-platinum {
+    background-color: #e2e2e2; /* A premium light-gray to make white/bronze pop */
+}
+
+/* 2. Toggle Switch (Pills) Styling */
+.custom-pills .nav-link {
+    background: transparent;
+    color: var(--obsidian);
+    border: 1px solid var(--obsidian);
+    border-radius: 0; /* Modern square look */
+    margin: 0 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 14px;
+    padding: 12px 35px;
+    transition: all 0.4s ease;
+}
+
+.custom-pills .nav-link.active {
+    background: var(--bronze) !important;
+    border-color: var(--bronze);
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(188, 153, 99, 0.3); /* Subtle bronze glow */
+}
+
+/* 3. Project Item Container */
+.project-item {
+    position: relative;
+    overflow: hidden;
+    height: 300px; /* Fixed height for a uniform grid */
+    background: var(--obsidian);
+}
+
+.project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures images fill the box without stretching */
+    transition: transform 0.8s cubic-bezier(0.2, 1, 0.2, 1);
+}
+
+/* 4. Hover Overlay */
+.project-overlay {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: rgba(18, 20, 22, 0.85); /* Dark obsidian tint */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.5s ease;
+}
+
+.project-item:hover .project-overlay {
+    opacity: 1;
+}
+
+.project-item:hover img {
+    transform: scale(1.15); /* Zoom effect on hover */
+}
+
+/* 5. Overlay Text Animation */
+.project-text {
+    text-align: center;
+    padding: 20px;
+    transform: translateY(30px);
+    transition: all 0.5s ease;
+}
+
+.project-item:hover .project-text {
+    transform: translateY(0);
+}
+
+.project-text h5 {
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.project-text span {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* 6. Responsive Fixes */
+@media (max-width: 991px) {
+    .project-item {
+        height: 250px; /* Slightly shorter on tablets */
+    }
+}
+
+@media (max-width: 576px) {
+    .custom-pills .nav-link {
+        padding: 10px 20px;
+        font-size: 12px;
+        margin: 0 5px;
+    }
+}
+
+
+
+/* --- Why Hire Us Custom Styles --- */
+.btn-obsidian {
+    background-color: #121416;
+    color: #ffffff;
+    border: none;
+    transition: 0.3s;
+}
+
+.btn-obsidian:hover {
+    background-color: var(--bronze);
+    color: #fff;
+    transform: translateY(-3px);
+}
+
+.btn-outline-bronze {
+    border: 2px solid var(--bronze);
+    color: var(--obsidian);
+    transition: 0.3s;
+}
+
+.btn-outline-bronze:hover {
+    background-color: var(--bronze);
+    color: #fff;
+}
+
+.hire-item {
+    transition: 0.4s;
+}
+
+.hire-item:hover {
+    transform: translateX(10px);
+    background-color: #ffffff !important;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.08) !important;
+}
+
+.bg-bronze {
+    background-color: var(--bronze);
+}
+
+.text-obsidian {
+    color: #121416;
+}
+
+/* Vertical Border Accent */
+.border-bronze {
+    border-color: var(--bronze) !important;
+}
+
+
+
+
+
+
+
+
+/* --- Areas We Serve Custom Styles --- */
+.region-card {
+    background: #fff;
+    transition: 0.4s;
+    border-radius: 0 0 8px 8px;
+    overflow: hidden;
+}
+
+.region-header {
+    background-color: #121416;
+}
+
+.location-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.location-badge {
+    background: #ffffff;
+    color: #121416;
+    padding: 8px 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid #e1e1e1;
+    border-radius: 50px;
+    transition: 0.3s;
+    cursor: default;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.location-badge:hover {
+    background: var(--bronze);
+    color: #fff;
+    border-color: var(--bronze);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(197, 157, 95, 0.3);
+}
+
+.region-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.1) !important;
+}
+
+/* Header Text Opacity Fix */
+.small.fw-normal.opacity-50 {
+    font-size: 0.7rem;
+    letter-spacing: 2px;
+}
+
+
+
+
+
+
+
+
+
+/* --- Contact Section Custom Styles --- */
+.bg-obsidian { background-color: #121416; }
+
+.custom-input {
+    border: 1px solid #e1e1e1;
+    border-radius: 0;
+    background-color: #fcfcfc;
+    transition: 0.3s;
+}
+
+.custom-input:focus {
+    background-color: #fff;
+    border-color: var(--bronze);
+    box-shadow: none;
+}
+
+.contact-icon-box {
+    width: 50px;
+    height: 50px;
+    background: rgba(197, 157, 95, 0.1);
+    color: var(--bronze);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 20px;
+    border-radius: 4px;
+}
+
+.btn-obsidian {
+    background-color: #121416;
+    color: #fff;
+    border: none;
+    letter-spacing: 1px;
+    transition: 0.4s;
+}
+
+.btn-obsidian:hover {
+    background-color: var(--bronze);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+.btn-square {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Form Responsiveness */
+@media (max-width: 991px) {
+    .bg-obsidian {
+        order: -1; /* Puts contact info above form on mobile */
+    }
+}
+
+
+
+
+
+/* --- Professional Map Styles --- */
+.location-floating-card {
+    position: absolute;
+    top: 50%;
+    left: 10%;
+    transform: translateY(-50%);
+    background: var(--obsidian);
+    padding: 40px;
+    width: 320px;
+    z-index: 5;
+    border-left: 5px solid var(--bronze);
+}
+
+/* Grayscale effect on map to match site theme */
+iframe {
+    filter: grayscale(0.2) invert(0.05) contrast(1.1);
+    transition: 0.5s;
+}
+
+iframe:hover {
+    filter: grayscale(0); /* Map returns to full color on hover/interaction */
+}
+
+/* Bronze Button for Map */
+.btn-outline-bronze {
+    border: 1px solid var(--bronze);
+    color: var(--bronze);
+    transition: 0.3s;
+}
+
+.btn-outline-bronze:hover {
+    background: var(--bronze);
+    color: #fff;
+}
+
+@media (max-width: 991px) {
+    .location-floating-card {
+        display: none; /* Hide floating card on mobile to show full map */
+    }
+}
+
+
+
+
+/* --- Footer --- */
+.footer {
+    background: var(--obsidian);
+    color: #a0aec0;
+    border-top: 5px solid var(--bronze);
+}
+
+.footer a {
+    color: #a0aec0;
+    text-decoration: none;
+    transition: 0.3s;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer a:hover { color: var(--bronze); padding-left: 5px; }
+
+
+
+/* The "Breathing Room" Rule */
+section, .py-6 {
+    padding-top: 90px !important;
+    padding-bottom: 90px !important;
+}
+
+@media (max-width: 768px) {
+    section, .py-6 {
+        padding-top: 60px !important;
+        padding-bottom: 60px !important;
+    }
+}
+
+
+
+
+
+
+
+
+
+/* --- About Page Unique Styles --- */
+.text-outline-dark {
+    -webkit-text-stroke: 1px var(--obsidian);
+    color: transparent;
+}
+
+.bg-dark-soft {
+    background: rgba(255,255,255,0.05);
+}
+
+.about-card {
+    transition: 0.4s;
+}
+
+.about-card:hover {
+    background: var(--bronze) !important;
+    transform: translateY(-10px);
+}
+
+.about-card:hover h4, .about-card:hover p, .about-card:hover a {
+    color: #fff !important;
+}
+
+.page-header {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-1 {
+    font-size: 5rem;
+    letter-spacing: 10px;
+}
+
+@media (max-width: 768px) {
+    .display-1 { font-size: 3rem; letter-spacing: 5px; }
+    .page-header { min-height: 300px; }
+}

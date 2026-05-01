@@ -1,0 +1,70 @@
+/* --- Contact Page Styles --- */
+
+.text-outline-dark {
+    -webkit-text-stroke: 1px var(--obsidian);
+    color: transparent;
+}
+
+/* Floating Label Styling */
+.form-floating > .form-control:focus ~ label,
+.form-floating > .form-control:not(:placeholder-shown) ~ label {
+    color: var(--bronze);
+    font-weight: bold;
+}
+
+.form-control:focus {
+    box-shadow: none;
+    border: 1px solid var(--bronze) !important;
+}
+
+/* Contact Info Card */
+.contact-info-card {
+    border-radius: 4px;
+    border-top: 5px solid var(--bronze);
+}
+
+.contact-icon-box {
+    width: 50px;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(197, 157, 95, 0.1);
+    border: 1px solid rgba(197, 157, 95, 0.3);
+    border-radius: 50%;
+}
+
+.credential-tag {
+    background: var(--bronze);
+    color: white;
+    padding: 5px 15px;
+    font-size: 11px;
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+/* Map Filter (Professional Look) */
+iframe {
+    vertical-align: middle;
+    border: 0;
+}
+
+/* Header Height */
+.page-header {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-1 {
+    font-size: 5rem;
+    letter-spacing: 10px;
+}
+
+@media (max-width: 768px) {
+    .display-1 { font-size: 3rem; letter-spacing: 5px; }
+    .page-header { min-height: 300px; }
+    .contact-info-card { margin-top: 2rem; }
+}

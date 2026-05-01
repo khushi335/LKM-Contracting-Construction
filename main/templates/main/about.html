@@ -1,0 +1,113 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5" style="background: linear-gradient(rgba(18, 20, 22, 0.7), rgba(18, 20, 22, 0.7)), url('{% static 'img/about-banner.jpg' %}') center center no-repeat; background-size: cover;">
+    <div class="container py-5 text-center">
+        <h1 class="display-1 text-white text-uppercase fw-bold mb-0">About Us</h1>
+        <div class="d-inline-flex align-items-center text-white mt-3">
+            <p class="m-0 text-uppercase"><a class="text-white" href="{% url 'index' %}">Home</a></p>
+            <i class="fa fa-angle-double-right pt-1 px-3"></i>
+            <p class="m-0 text-uppercase text-bronze">About Us</p>
+        </div>
+    </div>
+</div>
+<!-- Page Header End -->
+
+<!-- The Way We Build Start -->
+<div class="container-fluid py-6">
+    <div class="container">
+        <div class="row g-5 align-items-center">
+            <div class="col-lg-6">
+                <h6 class="text-bronze text-uppercase fw-bold mb-3" style="letter-spacing: 5px;">The Way We Build</h6>
+                <h1 class="display-5 text-uppercase mb-4">Great Experiences <span class="text-outline-dark">For Everyone</span></h1>
+                <p class="lead-text mb-4">At LKM Contracting & Construction, we dedicate ourselves to delivering outstanding results for all parties at every stage of the project life cycle.</p>
+                <p class="mb-4">From initial consultation to final handover, we ensure seamless communication, meticulous attention to detail, and exceptional craftsmanship. Built on integrity, teamwork, and commitment, we achieve greatness together with our clients and trade partners.</p>
+                <div class="row g-3 mb-5">
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box-small me-3">
+                                <i class="fa fa-check text-bronze"></i>
+                            </div>
+                            <h6 class="text-uppercase fw-bold m-0 text-obsidian">Meticulous Detail</h6>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="icon-box-small me-3">
+                                <i class="fa fa-users text-bronze"></i>
+                            </div>
+                            <h6 class="text-uppercase fw-bold m-0 text-obsidian">Teamwork Focused</h6>
+                        </div>
+                    </div>
+                </div>
+                <a href="{% url 'contact' %}" class="btn btn-bronze py-3 px-5">Learn More</a>
+            </div>
+            <div class="col-lg-6">
+                <div class="position-relative ps-5 pb-5">
+                    <img class="img-fluid w-100 rounded shadow" src="{% static 'img/bout-secondary.jpg' %}" alt="LKM Craftsmanship">
+                    <div class="experience-badge bg-obsidian p-4 shadow">
+                        <h1 class="display-3 text-bronze fw-bold mb-0">20+</h1>
+                        <p class="text-white text-uppercase mb-0 fw-bold small">Years of Building <br>NY & NJ Excellence</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Mission & Culture Grid -->
+<div class="container-fluid py-6 bg-obsidian text-white">
+    <div class="container">
+        <div class="text-center mx-auto mb-5" style="max-width: 700px;">
+            <h6 class="text-bronze text-uppercase fw-bold mb-2">Our Foundation</h6>
+            <h1 class="display-5 text-uppercase mb-4 text-white">Mission & <span class="text-bronze">Values</span></h1>
+        </div>
+        <div class="row g-4">
+            <!-- Our People -->
+            <div class="col-lg-4">
+                <div class="about-card p-5 h-100 border-start border-bronze border-4">
+                    <h4 class="text-uppercase fw-bold mb-3">Our People</h4>
+                    <p class="small opacity-75 mb-4">America’s best builders call LKM Contracting & Construction home. Meet the people who create great experiences for everyone.</p>
+                    <a href="{% url 'contact' %}" class="text-bronze text-uppercase fw-bold small">Contact Us <i class="fa fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <!-- Employee Ownership -->
+            <div class="col-lg-4">
+                <div class="about-card p-5 h-100 border-start border-bronze border-4 bg-dark-soft">
+                    <h4 class="text-uppercase fw-bold mb-3">Employee Ownership</h4>
+                    <p class="small opacity-75 mb-4">As a 100% employee-owned company, we are personally vested in the success of our clients, trade partners, and each other.</p>
+                    <a href="{% url 'contact' %}" class="text-bronze text-uppercase fw-bold small">Contact Us <i class="fa fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+            <!-- DEI -->
+            <div class="col-lg-4">
+                <div class="about-card p-5 h-100 border-start border-bronze border-4">
+                    <h4 class="text-uppercase fw-bold mb-3">Diversity & Safety</h4>
+                    <p class="small opacity-75 mb-4">The best outcomes require teams where every voice is heard and everyone can succeed without barriers.</p>
+                    <a href="{% url 'contact' %}" class="text-bronze text-uppercase fw-bold small">Contact Us <i class="fa fa-arrow-right ms-2"></i></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Community Section -->
+<div class="container-fluid py-6 bg-white">
+    <div class="container">
+        <div class="row align-items-center g-5">
+            <div class="col-lg-5">
+                <img class="img-fluid rounded shadow-lg" src="{% static 'img/community.jpg' %}" alt="Community Build">
+            </div>
+            <div class="col-lg-7">
+                <h2 class="text-uppercase fw-bold mb-4">Built Within the <span class="text-bronze">Community</span></h2>
+                <p>For decades, LKM Contracting & Construction has proudly built the communities where we live and work. Giving back is a foundation of our culture.</p>
+                <p class="fw-bold text-obsidian">All Framing And Roofing By LKM Contracting & Construction.</p>
+                <a href="{% url 'contact' %}" class="btn btn-obsidian py-3 px-5 mt-3">Join Our Journey</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}  

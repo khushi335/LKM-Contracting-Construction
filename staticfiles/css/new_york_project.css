@@ -1,0 +1,87 @@
+/* --- New York Projects Specific Styles --- */
+
+.portfolio-container {
+    padding: 0 15px;
+}
+
+.ny-project-item {
+    position: relative;
+    overflow: hidden;
+    height: 350px; /* Uniform height for the 4-column grid */
+    background: var(--obsidian);
+    border-radius: 4px;
+}
+
+.ny-project-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+.ny-project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(18, 20, 22, 0.95) 0%, rgba(18, 20, 22, 0.4) 100%);
+    display: flex;
+    align-items: flex-end; /* Text at the bottom */
+    padding: 30px;
+    opacity: 0;
+    transition: all 0.4s ease;
+}
+
+.ny-project-text {
+    transform: translateY(20px);
+    transition: all 0.4s ease;
+}
+
+.ny-project-item:hover .ny-project-overlay {
+    opacity: 1;
+}
+
+.ny-project-item:hover .ny-project-text {
+    transform: translateY(0);
+}
+
+.ny-project-item:hover img {
+    transform: scale(1.1);
+}
+
+.ny-project-text h5 {
+    letter-spacing: 2px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+}
+
+.ny-project-text span {
+    font-size: 12px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-weight: 600;
+}
+
+.text-outline-dark {
+    -webkit-text-stroke: 1px var(--obsidian);
+    color: transparent;
+}
+
+/* Page Header */
+.page-header {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-1 {
+    font-size: 5rem;
+    letter-spacing: 10px;
+}
+
+@media (max-width: 991px) {
+    .ny-project-item { height: 300px; }
+    .display-1 { font-size: 3rem; }
+}

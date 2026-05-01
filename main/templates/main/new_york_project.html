@@ -1,0 +1,143 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<!-- Page Header Start -->
+<div class="container-fluid page-header py-5 mb-5" style="background: linear-gradient(rgba(18, 20, 22, 0.7), rgba(18, 20, 22, 0.7)), url('{% static 'img/ny-skyline-banner.jpg' %}') center center no-repeat; background-size: cover;">
+    <div class="container py-5 text-center">
+        <h1 class="display-1 text-white text-uppercase fw-bold mb-0">NY Portfolio</h1>
+        <div class="d-inline-flex align-items-center text-white mt-3">
+            <p class="m-0 text-uppercase"><a class="text-white" href="{% url 'index' %}">Home</a></p>
+            <i class="fa fa-angle-double-right pt-1 px-3"></i>
+            <p class="m-0 text-uppercase text-bronze">New York Projects</p>
+        </div>
+    </div>
+</div>
+
+<!-- Project Grid Section -->
+<div class="container-fluid py-6 px-5">
+    <div class="text-center mx-auto mb-5" style="max-width: 600px;">
+        <h6 class="text-bronze text-uppercase fw-bold mb-3" style="letter-spacing: 5px;">Excellence in Action</h6>
+        <h1 class="display-5 text-uppercase mb-0">Our New York <span class="text-outline-dark">Legacy</span></h1>
+    </div>
+
+    <div class="row g-4 portfolio-container">
+        <!-- Project 1: Dentist Office -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="ny-project-item">
+                <img class="img-fluid" src="{% static 'img/dentist.jpg' %}" alt="Dentist Office">
+                <div class="ny-project-overlay">
+                    <div class="ny-project-text">
+                        <h5 class="text-white text-uppercase mb-2">Dentist Office</h5>
+                        <span class="text-bronze">Commercial Renovation</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 2: Cipriani -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="ny-project-item">
+                <img class="img-fluid" src="{% static 'img/cipriani.jpg' %}" alt="Cipriani NY">
+                <div class="ny-project-overlay">
+                    <div class="ny-project-text">
+                        <h5 class="text-white text-uppercase mb-2">Cipriani New York</h5>
+                        <span class="text-bronze">High-End Interior</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 3: 218 Court St -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="ny-project-item">
+                <img class="img-fluid" src="{% static 'img/court-st-218.jpg' %}" alt="218 Court St">
+                <div class="ny-project-overlay">
+                    <div class="ny-project-text">
+                        <h5 class="text-white text-uppercase mb-2">218 Court St Brooklyn</h5>
+                        <span class="text-bronze">Structural Framing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 4: ACIS Fine Art -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="ny-project-item">
+                <img class="img-fluid" src="{% static 'img/acis.jpg' %}" alt="ACIS Fine Art">
+                <div class="ny-project-overlay">
+                    <div class="ny-project-text">
+                        <h5 class="text-white text-uppercase mb-2">ACIS Fine Art</h5>
+                        <span class="text-bronze">Bespoke Gallery Build</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 5: 1350 Ocean PKWy -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="ny-project-item">
+                <img class="img-fluid" src="{% static 'img/ocean-pkwy.jpg' %}" alt="1350 Ocean PKWy">
+                <div class="ny-project-overlay">
+                    <div class="ny-project-text">
+                        <h5 class="text-white text-uppercase mb-2">1350 Ocean PKWy</h5>
+                        <span class="text-bronze">Multi-Unit Roofing</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 6: Self Storage 6th St -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="ny-project-item">
+                <img class="img-fluid" src="{% static 'img/storage-6th.jpg' %}" alt="Self Storage 6th St">
+                <div class="ny-project-overlay">
+                    <div class="ny-project-text">
+                        <h5 class="text-white text-uppercase mb-2">Self Storage 6th St</h5>
+                        <span class="text-bronze">Industrial Construction</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 7: 216 Court St -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="ny-project-item">
+                <img class="img-fluid" src="{% static 'img/court-st-216.jpg' %}" alt="216 Court St">
+                <div class="ny-project-overlay">
+                    <div class="ny-project-text">
+                        <h5 class="text-white text-uppercase mb-2">216 Court St Brooklyn</h5>
+                        <span class="text-bronze">Exterior Restoration</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 8: 10 S St -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="ny-project-item">
+                <img class="img-fluid" src="{% static 'img/10-s-st.jpg' %}" alt="10 S St">
+                <div class="ny-project-overlay">
+                    <div class="ny-project-text">
+                        <h5 class="text-white text-uppercase mb-2">10 S St</h5>
+                        <span class="text-bronze">Steel Structure</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Project 9: Steel Damage -->
+        <div class="col-xl-3 col-lg-4 col-md-6">
+            <div class="ny-project-item">
+                <img class="img-fluid" src="{% static 'img/steel-damage.jpg' %}" alt="Steel Damage">
+                <div class="ny-project-overlay">
+                    <div class="ny-project-text">
+                        <h5 class="text-white text-uppercase mb-2">Steel Damage & Temp Roofing</h5>
+                        <span class="text-bronze">Emergency Repairs</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

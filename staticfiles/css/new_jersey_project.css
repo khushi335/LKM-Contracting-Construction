@@ -1,0 +1,80 @@
+/* --- New Jersey Projects Specific Styles --- */
+
+.nj-project-card {
+    position: relative;
+    overflow: hidden;
+    height: 380px; /* Standard portrait grid height */
+    border-radius: 4px;
+    background: var(--obsidian);
+}
+
+.nj-project-card img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.nj-project-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(rgba(18, 20, 22, 0.1), rgba(18, 20, 22, 0.9));
+    display: flex;
+    align-items: flex-end;
+    padding: 25px;
+    opacity: 0.9; /* Slightly visible always for readability */
+    transition: all 0.4s ease;
+}
+
+.nj-project-info {
+    transform: translateY(10px);
+    transition: all 0.4s ease;
+}
+
+.service-tag {
+    display: block;
+    color: var(--bronze);
+    text-transform: uppercase;
+    font-size: 0.75rem;
+    font-weight: 800;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+}
+
+.nj-project-card:hover img {
+    transform: scale(1.1);
+}
+
+.nj-project-card:hover .nj-project-overlay {
+    background: rgba(18, 20, 22, 0.85); /* Darkens on hover to focus text */
+}
+
+.nj-project-card:hover .nj-project-info {
+    transform: translateY(0);
+}
+
+.text-outline-dark {
+    -webkit-text-stroke: 1px var(--obsidian);
+    color: transparent;
+}
+
+/* Header Adjustments */
+.page-header {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.display-1 {
+    font-size: 5rem;
+    letter-spacing: 10px;
+}
+
+@media (max-width: 991px) {
+    .nj-project-card { height: 320px; }
+    .display-1 { font-size: 3rem; }
+}
