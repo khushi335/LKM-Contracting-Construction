@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Flooring Specific UI */
+    .flooring-hero {
+        background: linear-gradient(rgba(18, 20, 22, 0.7), rgba(18, 20, 22, 0.7)), 
+                    url('{% static "img/flooring-hero.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Floating Material Grid */
+    .floor-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: -60px; /* Overlap into hero for modern look */
+        position: relative;
+        z-index: 10;
+    }
+
+    .floor-card {
+        background: var(--white);
+        padding: 45px;
+        box-shadow: 0 20px 40px rgba(0,0,0,0.08);
+        border-bottom: 5px solid transparent;
+        transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .floor-card:hover {
+        transform: translateY(-10px);
+        border-bottom-color: var(--bronze);
+        background: var(--obsidian);
+        color: var(--white);
+    }
+
+    .floor-card i {
+        font-size: 2.8rem;
+        color: var(--bronze);
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    /* Subfloor Tech Section */
+    .tech-bg {
+        background-color: #f8fafc;
+        background-image: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23cbd5e0' fill-opacity='0.2'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+    }
+
+    .spec-pill {
+        display: inline-block;
+        padding: 8px 16px;
+        background: var(--platinum);
+        color: var(--obsidian);
+        font-weight: 700;
+        font-size: 0.8rem;
+        border-radius: 50px;
+        margin-right: 10px;
+        margin-bottom: 15px;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    /* Comparison Styling */
+    .comparison-row {
+        border-bottom: 1px solid var(--platinum);
+        padding: 20px 0;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .comparison-label {
+        font-weight: 800;
+        color: var(--slate);
+        font-family: 'Montserrat', sans-serif;
+    }
+
+</style>
+
+<!-- Hero Section -->
+<section class="flooring-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <span class="gc-badge">Architectural Surfaces</span>
+                <h1 class="text-white">Precision <br><span class="text-bronze">Flooring Solutions</span></h1>
+                <p class="text-platinum lead">Master-level installation of high-performance surfaces. From luxury hardwoods to industrial polished concrete, we deliver the foundation of your interior's aesthetic.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Overlapping Material Selection -->
+<section class="container pb-5">
+    <div class="floor-grid">
+        <div class="floor-card">
+            <i class="fas fa-tree"></i>
+            <h3>Hardwood & Engineered</h3>
+            <p>Premium Oak, Walnut, and Hickory installation with custom dustless finishing and oil-rubbed staining.</p>
+        </div>
+        <div class="floor-card">
+            <i class="fas fa-border-all"></i>
+            <h3>Tile & Porcelain</h3>
+            <p>Large-format porcelain and natural stone precision-set with expert anti-fracture membrane integration.</p>
+        </div>
+        <div class="floor-card">
+            <i class="fas fa-layer-group"></i>
+            <h3>Luxury Vinyl (LVP)</h3>
+            <p>100% waterproof, commercial-grade vinyl planking designed for maximum durability in high-traffic zones.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Structural Subfloor Section -->
+<section class="tech-bg py-100">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="gc-image-block">
+                    <div class="accent-box-bronze"></div>
+                    <img src="{% static 'img/subfloor-prep.jpg' %}" alt="Subfloor Preparation" class="img-main">
+                </div>
+            </div>
+            <div class="col-lg-6 ps-lg-5 mt-5 mt-lg-0">
+                <h2 class="text-obsidian">Built From The <br><span class="text-bronze">Subfloor Up</span></h2>
+                <p class="text-slate mb-4">A floor is only as good as what lies beneath it. We specialize in complex subfloor remediation to ensure a lifetime of silent, level, and stable performance.</p>
+                
+                <div class="mb-4">
+                    <span class="spec-pill">Self-Leveling</span>
+                    <span class="spec-pill">Acoustic Barriers</span>
+                    <span class="spec-pill">Radiant Heat Ready</span>
+                </div>
+
+                <div class="comparison-row">
+                    <span class="comparison-label">Moisture Mitigation</span>
+                    <span class="text-bronze"><i class="fas fa-check"></i> 100% Barrier</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-label">Leveling Accuracy</span>
+                    <span class="text-bronze"><i class="fas fa-check"></i> ±1/8" Over 10'</span>
+                </div>
+                <div class="comparison-row">
+                    <span class="comparison-label">Sound Rating</span>
+                    <span class="text-bronze"><i class="fas fa-check"></i> IIC 70+ Rated</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Luxury Finish CTA -->
+<section class="gc-cta">
+    <div class="container">
+        <div class="cta-card" style="background: var(--obsidian); border-top: 10px solid var(--bronze);">
+            <div class="cta-text">
+                <h2 class="text-white">Walk on Excellence.</h2>
+                <p class="text-platinum">Request a material sample or schedule a site measurement today.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="tel:9734207684" class="btn-bronze">Get a Flooring Estimate</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

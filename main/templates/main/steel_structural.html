@@ -1,0 +1,171 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Scope-specific Styles for Steel Structural Page */
+    .steel-hero {
+        background: linear-gradient(rgba(18, 20, 22, 0.9), rgba(18, 20, 22, 0.7)), 
+                    url('{% static "img/steel-beams.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        height: 80vh;
+        display: flex;
+        align-items: center;
+        border-bottom: 5px solid var(--bronze);
+    }
+
+    .structural-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 2px; /* Creates a "Steel Beam" look between cards */
+        background: var(--platinum);
+        margin-top: -60px;
+        box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+    }
+
+    .grid-card {
+        background: var(--white);
+        padding: 50px 40px;
+        transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+    }
+
+    .grid-card:hover {
+        background: var(--obsidian);
+        color: var(--white);
+        transform: translateY(-5px);
+    }
+
+    .grid-card:hover .card-icon {
+        color: var(--bronze);
+    }
+
+    .card-icon {
+        font-size: 2.5rem;
+        color: var(--obsidian);
+        margin-bottom: 20px;
+        display: block;
+    }
+
+    .spec-table {
+        width: 100%;
+        border-collapse: collapse;
+        margin-top: 30px;
+        font-family: 'Montserrat', sans-serif;
+    }
+
+    .spec-table td {
+        padding: 15px 0;
+        border-bottom: 1px solid #e2e8f0;
+        font-size: 0.9rem;
+        text-transform: uppercase;
+        letter-spacing: 1px;
+    }
+
+    .spec-label {
+        font-weight: 700;
+        color: var(--bronze);
+    }
+
+    .blueprint-section {
+        padding: 100px 0;
+        background-image: radial-gradient(var(--slate) 1px, transparent 1px);
+        background-size: 30px 30px; /* Subtle Blueprint Grid Effect */
+        background-color: #f8fafc;
+    }
+
+    .steel-cta-banner {
+        background: var(--bronze);
+        color: var(--obsidian);
+        padding: 40px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-radius: 0;
+    }
+
+    @media (max-width: 768px) {
+        .steel-cta-banner { flex-direction: column; text-align: center; gap: 20px; }
+    }
+</style>
+
+<!-- Hero Section -->
+<section class="steel-hero">
+    <div class="container">
+        <div class="max-w-800">
+            <span class="gc-badge">Industrial Grade Engineering</span>
+            <h1 class="text-white">Precision <br><span class="text-bronze">Steel Structures</span></h1>
+            <p class="text-platinum">From high-rise skeletons to custom industrial reinforcements, we provide structural steel solutions that define the skyline of New York and New Jersey.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Grid (Overlap Design) -->
+<section class="container pb-5">
+    <div class="structural-grid">
+        <div class="grid-card">
+            <i class="fas fa-drafting-compass card-icon"></i>
+            <h3>Design & Build</h3>
+            <p>Integrated engineering services that bridge the gap between architectural vision and structural reality.</p>
+        </div>
+        <div class="grid-card">
+            <i class="fas fa-tools card-icon"></i>
+            <h3>Erection & Assembly</h3>
+            <p>Our specialized crews handle on-site assembly with millimetric precision and rigorous safety protocols.</p>
+        </div>
+        <div class="grid-card">
+            <i class="fas fa-shield-alt card-icon"></i>
+            <h3>Reinforcement</h3>
+            <p>Structural retrofitting and reinforcement for aging infrastructures and building upgrades.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Blueprint Detail Section -->
+<section class="blueprint-section">
+    <div class="container">
+        <div class="grid-2 align-items-center">
+            <div class="detail-content">
+                <span class="text-bronze-badge">Technical Excellence</span>
+                <h2 class="text-obsidian">Built to Withstand</h2>
+                <p>We utilize high-tensile American-made steel, ensuring every joint, bolt, and weld meets the highest seismic and structural standards.</p>
+                
+                <table class="spec-table">
+                    <tr>
+                        <td class="spec-label">Material</td>
+                        <td>A36 & A992 Grade Structural Steel</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Welding</td>
+                        <td>AWS Certified D1.1 Structural Welding</td>
+                    </tr>
+                    <tr>
+                        <td class="spec-label">Standards</td>
+                        <td>AISC Compliant Fabrication</td>
+                    </tr>
+                </table>
+            </div>
+            <div class="gc-image-block">
+                <div class="accent-box-bronze"></div>
+                <img src="{% static 'img/steel-construction.jpg' %}" alt="Steel Structure" class="img-main">
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Heavy Duty CTA -->
+<section class="pb-5">
+    <div class="container">
+        <div class="steel-cta-banner">
+            <div>
+                <h3 class="mb-0" style="font-weight: 800;">Request Structural Analysis</h3>
+                <p class="mb-0">Consult with our lead structural engineers today.</p>
+            </div>
+            <a href="tel:9734207684" class="btn-bronze" style="background: var(--obsidian); color: var(--white);">
+                <i class="fas fa-phone-alt mr-2"></i> (973) 420-7684
+            </a>
+        </div>
+    </div>
+</section>
+
+{% endblock %}

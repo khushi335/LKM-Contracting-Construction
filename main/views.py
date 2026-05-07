@@ -34,3 +34,36 @@ def general_construction(request):
     
 def demolition_building(request):
     return render(request, 'main/demolition_building.html')
+    
+def excavation(request):
+    return render(request, 'main/excavation.html')
+    
+def steel_structural(request):
+    return render(request, 'main/steel_structural.html')
+    
+def framing(request):
+    return render(request, 'main/framing.html')
+    
+def footing(request):
+    return render(request, 'main/concrete_footing.html')
+    
+def waterproofing(request):
+    return render(request, 'main/waterproofing.html')
+    
+def backfilling(request):
+    return render(request, 'main/backfilling.html')
+    
+def hvac(request):
+    return render(request, 'main/hvac_projects.html')
+    
+def roofing(request):
+    return render(request, 'main/roofing.html')
+    
+def decks(request):
+    return render(request, 'main/decks.html')
+    
+def flooring(request):
+    return render(request, 'main/flooring.html')
+    
+def painting(request):
+    return render(request, 'main/painting.html')

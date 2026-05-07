@@ -1,0 +1,192 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Decks Page Specific UI */
+    .decks-hero {
+        background: linear-gradient(rgba(18, 20, 22, 0.6), rgba(18, 20, 22, 0.8)), 
+                    url('{% static "img/composite-deck.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Deck Material Selection */
+    .deck-material-section {
+        padding: 100px 0;
+        background-color: var(--white);
+    }
+
+    .material-card {
+        border: 1px solid var(--platinum);
+        padding: 0;
+        transition: 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        background: var(--white);
+        height: 100%;
+    }
+
+    .material-card:hover {
+        transform: translateY(-15px);
+        box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+        border-color: var(--bronze);
+    }
+
+    .material-img {
+        height: 250px;
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+    }
+
+    .material-body {
+        padding: 30px;
+    }
+
+    /* Structural Features List */
+    .feature-tag {
+        display: inline-block;
+        padding: 5px 12px;
+        background: var(--platinum);
+        color: var(--slate);
+        font-size: 0.75rem;
+        font-weight: 700;
+        margin-right: 5px;
+        margin-bottom: 10px;
+        text-transform: uppercase;
+    }
+
+    /* Wood Texture Accent Section */
+    .wood-accent-bg {
+        background: var(--obsidian);
+        position: relative;
+        overflow: hidden;
+        padding: 100px 0;
+        color: var(--white);
+    }
+
+    /* Modern Progress Step for Deck Build */
+    .deck-step {
+        border-left: 2px solid var(--bronze);
+        padding-left: 30px;
+        position: relative;
+        margin-bottom: 40px;
+    }
+
+    .deck-step::before {
+        content: "";
+        position: absolute;
+        left: -9px;
+        top: 0;
+        width: 16px;
+        height: 16px;
+        background: var(--bronze);
+        border-radius: 50%;
+    }
+
+</style>
+
+<!-- Hero Section -->
+<section class="decks-hero">
+    <div class="container">
+        <div class="max-w-800">
+            <span class="gc-badge">Structural Artistry</span>
+            <h1 class="text-white">Master-Built <br><span class="text-bronze">Luxury Decks</span></h1>
+            <p class="text-platinum lead">Expanding your living space with precision-engineered outdoor structures. We combine architectural-grade framing with premium finishes to create the ultimate leisure environment.</p>
+            <div class="mt-4">
+                <a href="#materials" class="btn-bronze">Explore Finishes</a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Material Showcase -->
+<section id="materials" class="deck-material-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="text-obsidian">Engineered for Elegance</h2>
+            <div class="bronze-line"></div>
+        </div>
+
+        <div class="row g-4">
+            <div class="col-lg-4">
+                <div class="material-card">
+                    <div class="material-img" style="background-image: url('{% static "img/luxury-deck.jpg" %}');"></div>
+                    <div class="material-body">
+                        <span class="feature-tag">Low Maintenance</span>
+                        <h4 class="text-obsidian">Premium Composite</h4>
+                        <p class="text-slate">Utilizing Trex and Azek technology for decks that resist fading, staining, and mold without ever needing a sand or stain.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="material-card">
+                    <div class="material-img" style="background-image: url('{% static "img/ipe-deck.jpg" %}');"></div>
+                    <div class="material-body">
+                        <span class="feature-tag">Natural Hardwood</span>
+                        <h4 class="text-obsidian">Ipe & Exotic Woods</h4>
+                        <p class="text-slate">The "ironwood" of decking. Extremely dense, fire-rated, and naturally resistant to termites and rot for a 40+ year lifespan.</p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="material-card">
+                    <div class="material-img" style="background-image: url('{% static "img/cedar-deck.jpg" %}');"></div>
+                    <div class="material-body">
+                        <span class="feature-tag">Classic Craft</span>
+                        <h4 class="text-obsidian">Pressure Treated & Cedar</h4>
+                        <p class="text-slate">Traditional craftsmanship using kiln-dried lumber for a classic, structural look that fits any architectural style.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Build Process Section -->
+<section class="wood-accent-bg">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <div class="gc-image-block">
+                    <div class="accent-box-bronze" style="border-color: var(--platinum);"></div>
+                    <img src="{% static 'img/deck-framing-detail.jpg' %}" alt="Deck Construction" class="img-main">
+                </div>
+            </div>
+            <div class="col-lg-6 ps-lg-5 mt-5 mt-lg-0">
+                <h2 class="text-white mb-5">The Foundation of <br><span class="text-bronze">Outdoor Leisure</span></h2>
+                
+                <div class="deck-step">
+                    <h5 class="text-bronze">Helical Pile Foundations</h5>
+                    <p class="small text-platinum">We use deep-earth helical piles to ensure your deck never heaves or settles, regardless of frost cycles.</p>
+                </div>
+                <div class="deck-step">
+                    <h5 class="text-bronze">Lateral Load Connections</h5>
+                    <p class="small text-platinum">Engineered tension ties ensure the deck remains safely anchored to your home's primary structure.</p>
+                </div>
+                <div class="deck-step">
+                    <h5 class="text-bronze">Hidden Fastening Systems</h5>
+                    <p class="small text-platinum">A seamless, fastener-free surface that is safe for bare feet and provides a clean, modern aesthetic.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="gc-cta bg-platinum">
+    <div class="container">
+        <div class="cta-card" style="background: var(--obsidian); border-top: 8px solid var(--bronze);">
+            <div class="cta-text">
+                <h2 class="text-white">Start Your Outdoor Transformation.</h2>
+                <p class="text-platinum">Book a site consultation for a custom deck design and estimate.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="tel:9734207684" class="btn-bronze">Schedule Consultation</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

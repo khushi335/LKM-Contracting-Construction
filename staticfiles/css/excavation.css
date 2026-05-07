@@ -1,0 +1,47 @@
+/* Excavation Specific Hero Overlay */
+.excavation-hero {
+    background: linear-gradient(rgba(18,20,22,0.85), rgba(18,20,22,0.85)), url('../img/excavation-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    min-height: 80vh;
+}
+
+/* Enhancing the Service List */
+.check-list i {
+    margin-right: 10px;
+}
+
+/* Animations for Step Cards */
+.step-card:hover {
+    transform: scale(1.02);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+}
+
+/* Refined Typography for Professionalism */
+.gc-text-block h2 {
+    font-size: 2.8rem;
+    margin-bottom: 25px;
+    line-height: 1.1;
+    font-weight: 800;
+}
+
+.gc-text-block p {
+    font-size: 1.1rem;
+    color: #4A5568;
+    margin-bottom: 30px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    .gc-text-block h2 {
+        font-size: 2rem;
+    }
+    .cta-actions {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+    }
+    .cta-actions .btn-bronze {
+        margin-left: 0 !important;
+    }
+}

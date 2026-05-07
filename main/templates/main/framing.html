@@ -1,0 +1,160 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Framing Page Specific UI */
+    .framing-hero {
+        background: linear-gradient(rgba(255, 255, 255, 0.1), rgba(18, 20, 22, 0.9)), 
+                    url('{% static "img/wood-framing.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        height: 75vh;
+        display: flex;
+        align-items: flex-end; /* Text at bottom for modern feel */
+        padding-bottom: 80px;
+    }
+
+    .frame-outline-box {
+        border: 2px solid var(--bronze);
+        padding: 40px;
+        position: relative;
+        background: rgba(18, 20, 22, 0.4);
+        backdrop-filter: blur(10px);
+    }
+
+    /* Vertical Service Navigation */
+    .framing-nav-pill {
+        border-left: 4px solid var(--platinum);
+        padding: 15px 25px;
+        transition: 0.3s;
+        cursor: pointer;
+        margin-bottom: 10px;
+        background: #fdfdfd;
+        text-decoration: none;
+        display: block;
+        color: var(--slate);
+    }
+
+    .framing-nav-pill:hover, .framing-nav-pill.active {
+        border-left-color: var(--bronze);
+        background: var(--platinum);
+        transform: translateX(10px);
+        font-weight: 700;
+    }
+
+    /* Feature Highlight - Skeleton View */
+    .skeleton-card {
+        border: 1px solid #eee;
+        padding: 0;
+        overflow: hidden;
+        transition: 0.5s;
+    }
+
+    .skeleton-card img {
+        transition: 0.5s;
+        filter: grayscale(100%);
+    }
+
+    .skeleton-card:hover img {
+        filter: grayscale(0%);
+        transform: scale(1.1);
+    }
+
+    .skeleton-info {
+        padding: 30px;
+        background: var(--white);
+    }
+
+    /* Modern CTA Quote */
+    .quote-box {
+        background: var(--obsidian);
+        color: var(--white);
+        border-radius: 4px;
+        padding: 60px;
+        margin-top: -100px;
+        z-index: 10;
+        position: relative;
+        box-shadow: 0 25px 50px rgba(0,0,0,0.2);
+    }
+
+    .bronze-dash {
+        width: 40px;
+        height: 4px;
+        background: var(--bronze);
+        display: inline-block;
+        margin-right: 15px;
+        vertical-align: middle;
+    }
+
+</style>
+
+<!-- Modern Hero -->
+<section class="framing-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-7">
+                <div class="frame-outline-box">
+                    <span class="gc-badge">Structural Wood & Metal</span>
+                    <h1 class="text-white mb-3">The Architectural <br><span class="text-bronze">Skeleton</span></h1>
+                    <p class="text-platinum lead">Precision framing is the difference between a house and a legacy. We provide master-level structural skeletons for residential and commercial developments.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Content Section -->
+<section class="py-5 bg-light">
+    <div class="container">
+        <div class="row">
+            <!-- Sidebar Nav -->
+            <div class="col-md-4">
+                <div class="sticky-top" style="top: 100px;">
+                    <h4 class="mb-4 text-obsidian"><div class="bronze-dash"></div>Our Expertise</h4>
+                    <a href="#wood" class="framing-nav-pill active">Residential Wood Framing</a>
+                    <a href="#metal" class="framing-nav-pill">Light Gauge Metal Studs</a>
+                    <a href="#roof" class="framing-nav-pill">Truss & Roof Systems</a>
+                    <a href="#custom" class="framing-nav-pill">Custom Architectural Details</a>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="col-md-8">
+                <div id="wood" class="mb-5">
+                    <h2 class="text-obsidian">Master Woodwork</h2>
+                    <p class="text-slate">Using premium Douglas Fir and engineered lumber (LVLs), our framing teams ensure perfectly plumb walls and level floors. We specialize in complex custom homes where every angle counts.</p>
+                    <div class="skeleton-card mt-4">
+                        <img src="{% static 'img/framing-detail.jpg' %}" alt="Framing" class="img-fluid">
+                        <div class="skeleton-info">
+                            <h5 class="text-bronze">Precision Specs:</h5>
+                            <p class="small text-muted mb-0">Laser-leveled wall plates | Engineered headers | IRC 2024 Code Compliance</p>
+                        </div>
+                    </div>
+                </div>
+
+                <hr class="my-5">
+
+                <div id="metal" class="mb-5">
+                    <h2 class="text-obsidian">Commercial Metal Framing</h2>
+                    <p class="text-slate">For commercial interiors and multi-family units, our light-gauge metal framing offers fire-resistant, perfectly straight, and durable structural solutions.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Contact Section -->
+<section class="pb-5">
+    <div class="container">
+        <div class="quote-box text-center">
+            <h2 class="text-white">Precision starts with a conversation.</h2>
+            <p class="text-platinum mb-4">Send your blueprints to our estimation team for a detailed takeoff.</p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap">
+                <a href="mailto:info@lkmfoundation.com" class="btn-bronze">Submit Blueprints</a>
+                <a href="tel:9734207684" class="btn-outline-platinum">Direct Line</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

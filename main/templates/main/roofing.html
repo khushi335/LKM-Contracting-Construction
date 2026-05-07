@@ -1,0 +1,172 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Roofing Specific UI */
+    .roofing-hero {
+        background: linear-gradient(rgba(18, 20, 22, 0.7), rgba(18, 20, 22, 0.7)), 
+                    url('{% static "img/modern-roofing.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Architectural Shingle Grid */
+    .roof-feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 0; /* Seamless transition between cards */
+        background: var(--platinum);
+    }
+
+    .roof-card {
+        background: var(--white);
+        padding: 60px 40px;
+        border-right: 1px solid #edf2f7;
+        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .roof-card:hover {
+        background: var(--obsidian);
+        color: var(--white);
+    }
+
+    .roof-card i {
+        font-size: 3rem;
+        color: var(--bronze);
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    /* Durability Section */
+    .durability-section {
+        padding: 100px 0;
+        background: var(--obsidian);
+        color: var(--white);
+        overflow: hidden;
+    }
+
+    .shingle-layer {
+        position: relative;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+        margin-bottom: 30px;
+    }
+
+    .shingle-layer:last-child { border: none; }
+
+    .layer-title {
+        color: var(--bronze);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    /* Weather Badges */
+    .weather-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: var(--platinum);
+        color: var(--obsidian);
+        font-weight: 700;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    }
+
+</style>
+
+<!-- Hero Section -->
+<section class="roofing-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <span class="gc-badge">Superior Enclosure Systems</span>
+                <h1 class="text-white">Precision <br><span class="text-bronze">Roofing & Weatherproofing</span></h1>
+                <p class="text-platinum lead">The peak of structural integrity. We specialize in high-performance roofing systems designed to withstand the volatile climates of the Northeast.</p>
+                <div class="mt-4">
+                    <a href="#systems" class="btn-bronze">Explore Systems</a>
+                    <a href="tel:9734207684" class="btn-outline-platinum">Emergency Repair</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Feature Seamless Grid -->
+<section id="systems">
+    <div class="roof-feature-grid">
+        <div class="roof-card text-center">
+            <i class="fas fa-home"></i>
+            <h3>Residential Shingles</h3>
+            <p>Architectural grade shingles offering superior wind resistance and aesthetic depth for custom luxury homes.</p>
+        </div>
+        <div class="roof-card text-center">
+            <i class="fas fa-building"></i>
+            <h3>Commercial Flat Roofs</h3>
+            <p>TPM and EPDM single-ply membranes engineered for long-term durability and thermal efficiency in commercial spaces.</p>
+        </div>
+        <div class="roof-card text-center">
+            <i class="fas fa-industry"></i>
+            <h3>Metal Roofing</h3>
+            <p>Standing seam metal roofing providing a lifetime of protection with modern architectural flair and fire resistance.</p>
+        </div>
+    </div>
+</section>
+
+<!-- Layered Defense Section -->
+<section class="durability-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="text-white mb-5">Built to <span class="text-bronze">Last</span></h2>
+                
+                <div class="shingle-layer">
+                    <span class="layer-title">01. Surface Layer</span>
+                    <p>Impact-resistant granules designed to deflect UV radiation and prevent algae growth.</p>
+                </div>
+                <div class="shingle-layer">
+                    <span class="layer-title">02. Ice & Water Shield</span>
+                    <p>Self-adhering polymer modified bitumen for maximum protection in eaves and valleys.</p>
+                </div>
+                <div class="shingle-layer">
+                    <span class="layer-title">03. Ventilation System</span>
+                    <p>Engineered ridge vents to manage attic temperature and extend the life of the deck.</p>
+                </div>
+
+                <div class="mt-5">
+                    <div class="weather-badge">WIND RATED 130MPH</div>
+                    <div class="weather-badge">CLASS A FIRE RATED</div>
+                </div>
+            </div>
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="gc-image-block">
+                    <div class="accent-box-bronze" style="right: auto; left: -20px;"></div>
+                    <img src="{% static 'img/roofing-detail.jpg' %}" alt="Roofing Construction" class="img-main">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Roofing CTA -->
+<section class="gc-cta">
+    <div class="container">
+        <div class="cta-card">
+            <div class="cta-text">
+                <h2 class="text-white">Protect your investment.</h2>
+                <p class="text-platinum">Contact us for a professional roof inspection and certified installation quote.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="tel:9734207684" class="cta-phone"><i class="fas fa-phone-alt"></i> (973) 420-7684</a>
+                <a href="#" class="btn-bronze" style="margin-left: 20px;">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

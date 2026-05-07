@@ -1,0 +1,179 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Concrete Footing Specific UI */
+    .footing-hero {
+        background: linear-gradient(rgba(18, 20, 22, 0.8), rgba(18, 20, 22, 0.8)), 
+                    url('{% static "img/concrete-pour.jpg" %}');
+        background-size: cover;
+        background-position: center;
+        height: 70vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Technical Detail Cards */
+    .tech-card {
+        background: var(--white);
+        border-top: 5px solid var(--bronze);
+        padding: 40px;
+        box-shadow: 0 15px 35px rgba(0,0,0,0.05);
+        height: 100%;
+        transition: 0.3s ease;
+    }
+
+    .tech-card:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 20px 45px rgba(0,0,0,0.1);
+    }
+
+    .rebar-accent {
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 900;
+        font-size: 4rem;
+        color: rgba(197, 157, 95, 0.1);
+        position: absolute;
+        top: 10px;
+        right: 20px;
+    }
+
+    /* Section with "Cured Concrete" Texture */
+    .cured-section {
+        background-color: #f4f7f9;
+        background-image: url("https://www.transparenttextures.com/patterns/concrete-wall.png");
+        padding: 100px 0;
+    }
+
+    .spec-list {
+        list-style: none;
+        padding: 0;
+    }
+
+    .spec-list li {
+        padding: 12px 0;
+        border-bottom: 1px solid rgba(0,0,0,0.05);
+        display: flex;
+        justify-content: space-between;
+        font-family: 'Montserrat', sans-serif;
+        font-size: 0.85rem;
+    }
+
+    .spec-list li span {
+        font-weight: 700;
+        color: var(--bronze);
+    }
+
+    /* Comparison Box */
+    .comparison-grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px;
+        margin-top: 50px;
+    }
+
+    .footing-type {
+        background: var(--obsidian);
+        color: var(--white);
+        padding: 40px;
+        border-left: 8px solid var(--bronze);
+    }
+
+    @media (max-width: 768px) {
+        .comparison-grid { grid-template-columns: 1fr; }
+    }
+</style>
+
+<!-- Hero Section -->
+<section class="footing-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <span class="gc-badge">Load-Bearing Excellence</span>
+                <h1 class="text-white">Structural <br><span class="text-bronze">Concrete Footings</span></h1>
+                <p class="text-platinum lead">Transferring weight with surgical precision. We engineer and pour the sub-surface structures that keep your vision standing for a century.</p>
+                <div class="mt-4">
+                    <a href="#types" class="btn-bronze">View Specifications</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Engineering Details -->
+<section class="py-5">
+    <div class="container">
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="tech-card position-relative">
+                    <div class="rebar-accent">PSI</div>
+                    <h3>High-Strength Mix</h3>
+                    <p>We utilize custom 4,000+ PSI concrete mixes designed specifically for high-load architectural footings.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="tech-card position-relative">
+                    <div class="rebar-accent">#5</div>
+                    <h3>Reinforcement</h3>
+                    <p>Grade 60 rebar skeletons, tied with precision to handle both tension and compression forces.</p>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="tech-card position-relative">
+                    <div class="rebar-accent">GPS</div>
+                    <h3>Laser Levelling</h3>
+                    <p>Sub-millimeter accuracy using advanced laser-transit technology for perfectly level foundation starts.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footing Types Comparison -->
+<section id="types" class="cured-section">
+    <div class="container">
+        <div class="text-center mb-5">
+            <h2 class="text-obsidian">Custom Footing Solutions</h2>
+            <div class="bronze-line"></div>
+        </div>
+
+        <div class="comparison-grid">
+            <div class="footing-type">
+                <h4 class="text-bronze">Spread Footings</h4>
+                <p>Ideal for residential and light commercial builds, distributing weight over a wider surface area to prevent settling.</p>
+                <ul class="spec-list">
+                    <li>Soil Bearing Capacity <span>2,500 PSF+</span></li>
+                    <li>Standard Depth <span>36" - 48"</span></li>
+                    <li>Rebar Grade <span>Grade 60</span></li>
+                </ul>
+            </div>
+            <div class="footing-type" style="background: var(--slate);">
+                <h4 class="text-bronze">Stepped Footings</h4>
+                <p>Designed for the uneven terrain of NY and NJ, ensuring a level foundation transition on sloped sites.</p>
+                <ul class="spec-list">
+                    <li>Max Vertical Rise <span>24"</span></li>
+                    <li>Horizontal Run <span>Minimum 48"</span></li>
+                    <li>Compliance <span>IBC Section 1809</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA -->
+<section class="gc-cta">
+    <div class="container">
+        <div class="cta-card" style="border-right: 10px solid var(--bronze);">
+            <div class="cta-text">
+                <h2 class="text-white">Secure your foundation.</h2>
+                <p class="text-platinum">Consult with our structural concrete specialists for your next project.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="tel:9734207684" class="cta-link">(973) 420-7684</a>
+                <a href="#" class="btn-bronze" style="margin-left:20px">Get Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
