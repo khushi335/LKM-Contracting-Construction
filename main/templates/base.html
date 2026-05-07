@@ -21,6 +21,7 @@
     <link href="{% static 'css/contact.css' %}" rel="stylesheet">
     <link href="{% static 'css/new_york_project.css' %}" rel="stylesheet">
     <link href="{% static 'css/new_jersey_project.css' %}" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/general_construction.css' %}">
 </head>
 
 <body>
@@ -85,8 +86,8 @@
                                 <!-- Column 1 -->
                                 <div class="col-md-4 border-end-custom">
                                     <h6 class="dropdown-header text-bronze ps-0">Structural</h6>
-                                    <a class="dropdown-item" href="#">General Construction</a>
-                                    <a class="dropdown-item" href="#">Demolition & Building</a>
+                                    <a class="dropdown-item" href="{% url 'general_construction' %}">General Construction</a>
+                                    <a class="dropdown-item" href="{% url 'demolition_building' %}">Demolition & Building</a>
                                     <a class="dropdown-item" href="#">Excavation</a>
                                     <a class="dropdown-item" href="#">Steel Structural</a>
                                     <a class="dropdown-item" href="#">Framing</a>

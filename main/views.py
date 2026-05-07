@@ -28,3 +28,9 @@ def new_jersey_project(request):
 
 # def testimonial(request):
 #     return render(request,"main/testimonial.html")
+
+def general_construction(request):
+    return render(request, 'main/general_construction.html')
+    
+def demolition_building(request):
+    return render(request, 'main/demolition_building.html')

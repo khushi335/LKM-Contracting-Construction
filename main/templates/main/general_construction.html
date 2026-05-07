@@ -1,0 +1,104 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<!-- Architectural Hero Section -->
+<section class="gc-hero">
+    <div class="gc-hero-overlay">
+        <div class="container">
+            <div class="gc-hero-content">
+                <span class="gc-badge">Serving New York & New Jersey</span>
+                <h1>New York's Premier <br><span class="text-bronze">Construction Company</span></h1>
+                <p>The foundation of every project at <strong>LKM Contracting & Construction</strong> is to be on time, on budget, and hassle-free.</p>
+                <div class="gc-hero-btns">
+                    <a href="tel:9734207684" class="btn-bronze">Call (973) 420-7684</a>
+                    <a href="#contact" class="btn-outline-platinum">Get a Quote</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Bar (Similar to Reference Site) -->
+<div class="gc-stats-bar">
+    <div class="container">
+        <div class="stats-flex">
+            <div class="stat-item"><span>Family Owned</span></div>
+            <div class="stat-item"><span>Licensed & Insured</span></div>
+            <div class="stat-item"><span>100% Dedicated</span></div>
+        </div>
+    </div>
+</div>
+
+<!-- Commercial Services Section (New Jersey Focus) -->
+<section class="gc-split-section">
+    <div class="container">
+        <div class="grid-2 align-center">
+            <div class="gc-text-block">
+                <span class="sub-title text-bronze">Commercial General Contractors</span>
+                <h2>Serving New Jersey Businesses</h2>
+                <p>New Jersey boasts one of the nation’s most vibrant business communities. At LKM, we have over <strong>50 professionals</strong> with experience across virtually every industry.</p>
+                <p>We set ourselves apart through our rigorous design process. We never jump into a project without evaluating and minimizing risks to ensure a flawless plan is in place.</p>
+                <a href="#contact" class="btn-bronze">Build Your Success</a>
+            </div>
+            <div class="gc-image-block">
+                <img src="{% static 'img/nj-commercial.jpg' %}" alt="New Jersey Construction" class="img-main">
+                <div class="accent-box-bronze"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Process Section (New York Focus - Dark Mode) -->
+<section class="gc-process-section bg-obsidian">
+    <div class="container">
+        <div class="section-header text-center">
+            <!-- Title remains Bronze/Warning for branding -->
+            <h2 class="text-warning">General Contractor in New York</h2>
+            <div class="bronze-line"></div>
+            <p class="text-white">We work with you from inception to completion, eliminating the need for subcontractors to keep costs down.</p>
+        </div>
+        
+        <div class="process-steps-grid">
+            <!-- Step 01 -->
+            <div class="step-card">
+                <div class="step-icon">01</div>
+                <h3 class="text-white">Pre-Construction</h3>
+                <p class="text-white">Building budgets, assisting in design, and working with strategic partners to eliminate unwanted surprises.</p>
+            </div>
+            
+            <!-- Step 02 -->
+            <div class="step-card">
+                <div class="step-icon">02</div>
+                <h3 class="text-white">Active Construction</h3>
+                <p class="text-white">Project managers are intimately involved in day-to-day activities to stay on schedule and budget.</p>
+            </div>
+            
+            <!-- Step 03 -->
+            <div class="step-card">
+                <div class="step-icon">03</div>
+                <h3 class="text-white">Completion & Support</h3>
+                <p class="text-white">We ensure you understand your systems and provide support long after the project is complete.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Final CTA Section -->
+<section id="contact" class="gc-cta">
+    <div class="container">
+        <div class="cta-card">
+            <div class="cta-content">
+                <h2>Discuss Your Project in NY or NJ</h2>
+                <p>Contact LKM Contracting & Construction today to speak with one of our professionals.</p>
+                <div class="cta-contact-details">
+                    <a href="tel:9734207684" class="cta-link"><i class="fas fa-phone-alt"></i> (973) 420-7684</a>
+                </div>
+            </div>
+            <div class="cta-form-teaser">
+                <a href="#" class="btn-bronze">Fill Out Project Form</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

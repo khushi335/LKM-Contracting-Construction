@@ -1,0 +1,289 @@
+
+
+/* Base Styles */
+h1, h2, h3, .btn-bronze, .gc-badge {
+    font-family: 'Montserrat', sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Hero Section */
+.gc-hero {
+    background: linear-gradient(rgba(18,20,22,0.8), rgba(18,20,22,0.8)), url('../img/nyc-construction.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 90vh;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+}
+
+.gc-badge {
+    display: inline-block;
+    padding: 5px 15px;
+    border: 1px solid var(--bronze);
+    color: var(--bronze);
+    margin-bottom: 20px;
+    font-size: 0.8rem;
+}
+
+.gc-hero h1 {
+    font-size: clamp(2.5rem, 6vw, 4rem);
+    margin-bottom: 20px;
+}
+
+/* Stats Bar */
+.gc-stats-bar {
+    background: var(--bronze);
+    color: var(--obsidian);
+    padding: 20px 0;
+}
+
+.stats-flex {
+    display: flex;
+    justify-content: space-around;
+    font-weight: 700;
+    text-transform: uppercase;
+    font-size: 0.9rem;
+}
+
+/* Split Section */
+.gc-split-section { padding: 100px 0; }
+
+.gc-image-block { position: relative; }
+
+.img-main {
+    width: 100%;
+    position: relative;
+    z-index: 2;
+    box-shadow: 20px 20px 0px var(--platinum);
+}
+
+.accent-box-bronze {
+    position: absolute;
+    top: -20px;
+    right: -20px;
+    width: 100px;
+    height: 100px;
+    border: 5px solid var(--bronze);
+    z-index: 1;
+}
+
+/* Dark Mode Process Section */
+.bg-obsidian { background-color: var(--obsidian); }
+
+.gc-process-section { padding: 100px 0; }
+
+.gc-process-section h3 {
+    color: var(--white) !important;
+    margin-bottom: 15px;
+    font-weight: 600;
+} 
+
+.gc-process-section p {
+    color: rgba(255, 255, 255, 0.9); /* Slightly off-white for better readability */
+    line-height: 1.7;
+}
+
+/* Ensure the step numbers remain Bronze for contrast */
+.step-icon {
+    font-size: 3rem;
+    font-weight: 900;
+    color: var(--bronze); 
+    opacity: 0.4; /* Subtle architectural look */
+    margin-bottom: 10px;
+}
+
+.bronze-line {
+    width: 60px;
+    height: 3px;
+    background: var(--white);
+    margin: 20px auto;
+}
+
+.process-steps-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+    margin-top: 60px;
+}
+
+.step-card {
+    background: rgba(255, 255, 255, 0.05); /* Very light translucent background */
+    padding: 40px;
+    border-radius: 4px;
+    border: 1px solid rgba(197, 157, 95, 0.1); /* Subtle Bronze border */
+    transition: all 0.3s ease;
+}
+
+.step-card:hover {
+    border-color: var(--bronze);
+    background: rgba(255, 255, 255, 0.08);
+}
+
+/* CTA Card */
+.gc-cta { padding: 100px 0; background: var(--platinum); }
+
+.cta-card {
+    background: var(--obsidian);
+    color: var(--white);
+    padding: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-radius: 4px;
+}
+
+.cta-link {
+    font-size: 2rem;
+    color: var(--bronze);
+    text-decoration: none;
+    font-weight: 700;
+}
+
+/* Utility */
+.text-bronze { color: var(--bronze); }
+.text-platinum { color: var(--platinum); }
+.btn-bronze {
+    background: var(--bronze);
+    color: var(--obsidian);
+    padding: 15px 30px;
+    text-decoration: none;
+    font-weight: 700;
+    display: inline-block;
+}
+
+.btn-outline-platinum {
+    border: 2px solid var(--platinum);
+    color: var(--platinum);
+    padding: 13px 30px;
+    text-decoration: none;
+    margin-left: 15px;
+}
+
+.grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; }
+
+@media (max-width: 991px) {
+    .grid-2, .cta-card { grid-template-columns: 1fr; flex-direction: column; text-align: center; }
+    .btn-outline-platinum { margin-left: 0; margin-top: 15px; }
+    .cta-card { gap: 30px; }
+}
+
+
+
+
+
+
+/* Demolition Hero */
+.demo-hero {
+    background: linear-gradient(rgba(18,20,22,0.85), rgba(18,20,22,0.85)), url('../img/nj-commercial.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 70vh;
+    display: flex;
+    align-items: center;
+}
+
+.text-bronze-badge {
+    color: var(--bronze);
+    text-transform: uppercase;
+    font-weight: 700;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--bronze);
+    margin-bottom: 15px;
+    display: inline-block;
+}
+
+/* Split Service Panels */
+.demo-services-split {
+    padding: 0;
+    margin-top: -50px; /* Overlaps hero for modern look */
+}
+
+.service-panel-large {
+    padding: 80px 60px;
+    min-height: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.service-panel-large:hover {
+    transform: translateY(-10px);
+    z-index: 10;
+}
+
+.step-num {
+    font-size: 6rem;
+    font-weight: 900;
+    color: rgba(197, 157, 95, 0.1);
+    position: absolute;
+    top: 20px;
+    right: 40px;
+}
+
+.text-dark-muted { color: rgba(18, 20, 22, 0.1); }
+
+.check-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 25px;
+}
+
+.check-list li {
+    margin-bottom: 12px;
+    font-weight: 500;
+}
+
+/* Commitment Section */
+.demo-commitment {
+    padding: 100px 0;
+}
+
+.max-w-800 {
+    max-width: 800px;
+    margin: 0 auto;
+    font-size: 1.15rem;
+    line-height: 1.8;
+}
+
+/* CTA Box */
+.demo-cta {
+    padding: 100px 0;
+    background-color: var(--white);
+}
+
+.cta-box-modern {
+    background: var(--obsidian);
+    padding: 80px;
+    text-align: center;
+    border-top: 8px solid var(--bronze);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+}
+
+.cta-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.cta-phone {
+    font-size: 1.8rem;
+    color: var(--bronze);
+    text-decoration: none;
+    font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+}
+
+/* Utilities */
+.bg-platinum { background-color: var(--platinum); }
+.text-obsidian { color: var(--obsidian); }
+
+@media (max-width: 991px) {
+    .demo-services-split .grid-2 { grid-template-columns: 1fr; }
+    .cta-group { flex-direction: column; gap: 20px; }
+}
