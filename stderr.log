@@ -1120,3 +1120,367 @@ Not Found: /favicon.ico
 Not Found: /favicon.ico
 Not Found: /favicon.ico
 Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hightech/project22.quantumcoresoftware.com/home/main/views.py", line 50, in index
+    return render(request, 'main/index.html', {'form': form})
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 172, in render
+    return self._render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 164, in _render
+    return self.nodelist.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 1018, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 979, in render_annotated
+    return self.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 164, in _render
+    return self.nodelist.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 1018, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 979, in render_annotated
+    return self.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 1018, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 979, in render_annotated
+    return self.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'your-contact-view-url-name' not found. 'your-contact-view-url-name' is not a valid view function or pattern name.
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hightech/project22.quantumcoresoftware.com/home/main/views.py", line 50, in index
+    return render(request, 'main/index.html', {'form': form})
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/shortcuts.py", line 25, in render
+    content = loader.render_to_string(template_name, context, request, using=using)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/loader.py", line 62, in render_to_string
+    return template.render(context, request)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/backends/django.py", line 107, in render
+    return self.template.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 172, in render
+    return self._render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 164, in _render
+    return self.nodelist.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 1018, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 979, in render_annotated
+    return self.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/loader_tags.py", line 159, in render
+    return compiled_parent._render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 164, in _render
+    return self.nodelist.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 1018, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 979, in render_annotated
+    return self.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/loader_tags.py", line 65, in render
+    result = block.nodelist.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 1018, in render
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 1018, in <listcomp>
+    return SafeString("".join([node.render_annotated(context) for node in self]))
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/base.py", line 979, in render_annotated
+    return self.render(context)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/template/defaulttags.py", line 480, in render
+    url = reverse(view_name, args=args, kwargs=kwargs, current_app=current_app)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/urls/base.py", line 98, in reverse
+    resolved_url = resolver._reverse_with_prefix(view, prefix, *args, **kwargs)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/urls/resolvers.py", line 831, in _reverse_with_prefix
+    raise NoReverseMatch(msg)
+django.urls.exceptions.NoReverseMatch: Reverse for 'your-contact-view-url-name' not found. 'your-contact-view-url-name' is not a valid view function or pattern name.
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1807, in get_mailbox
+    token, value = get_name_addr(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1783, in get_name_addr
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected name-addr but found '['Myoussef@lkmconstruction.com', 'quantumcoresoftware1@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1472, in get_local_part
+    token, value = get_dot_atom(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1381, in get_dot_atom
+    token, value = get_dot_atom_text(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1350, in get_dot_atom_text
+    raise errors.HeaderParseError("expected atom at a start of "
+email.errors.HeaderParseError: expected atom at a start of dot-atom-text but found '['Myoussef@lkmconstruction.com', 'quantumcoresoftware1@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1810, in get_mailbox
+    token, value = get_addr_spec(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1656, in get_addr_spec
+    token, value = get_local_part(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1475, in get_local_part
+    token, value = get_word(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1414, in get_word
+    raise errors.HeaderParseError("Expected 'atom' or 'quoted-string' "
+email.errors.HeaderParseError: Expected 'atom' or 'quoted-string' but found '['Myoussef@lkmconstruction.com', 'quantumcoresoftware1@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/message.py", line 87, in sanitize_address
+    token, rest = parser.get_mailbox(addr)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1812, in get_mailbox
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected mailbox but found '['Myoussef@lkmconstruction.com', 'quantumcoresoftware1@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hightech/project22.quantumcoresoftware.com/home/main/views.py", line 25, in index
+    send_mail(
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/__init__.py", line 92, in send_mail
+    return mail.send()
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 136, in send_messages
+    sent = self._send(message)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 150, in _send
+    recipients = [
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 151, in <listcomp>
+    sanitize_address(addr, encoding) for addr in email_message.recipients()
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/message.py", line 89, in sanitize_address
+    raise ValueError('Invalid address "%s"' % addr)
+ValueError: Invalid address "['Myoussef@lkmconstruction.com', 'quantumcoresoftware1@gmail.com']"
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1807, in get_mailbox
+    token, value = get_name_addr(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1783, in get_name_addr
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected name-addr but found '['Myoussef@lkmconstruction.com', 'quantumcoresoftware1@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1472, in get_local_part
+    token, value = get_dot_atom(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1381, in get_dot_atom
+    token, value = get_dot_atom_text(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1350, in get_dot_atom_text
+    raise errors.HeaderParseError("expected atom at a start of "
+email.errors.HeaderParseError: expected atom at a start of dot-atom-text but found '['Myoussef@lkmconstruction.com', 'quantumcoresoftware1@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1810, in get_mailbox
+    token, value = get_addr_spec(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1656, in get_addr_spec
+    token, value = get_local_part(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1475, in get_local_part
+    token, value = get_word(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1414, in get_word
+    raise errors.HeaderParseError("Expected 'atom' or 'quoted-string' "
+email.errors.HeaderParseError: Expected 'atom' or 'quoted-string' but found '['Myoussef@lkmconstruction.com', 'quantumcoresoftware1@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/message.py", line 87, in sanitize_address
+    token, rest = parser.get_mailbox(addr)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1812, in get_mailbox
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected mailbox but found '['Myoussef@lkmconstruction.com', 'quantumcoresoftware1@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hightech/project22.quantumcoresoftware.com/home/main/views.py", line 25, in index
+    send_mail(
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/__init__.py", line 92, in send_mail
+    return mail.send()
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 136, in send_messages
+    sent = self._send(message)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 150, in _send
+    recipients = [
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 151, in <listcomp>
+    sanitize_address(addr, encoding) for addr in email_message.recipients()
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/message.py", line 89, in sanitize_address
+    raise ValueError('Invalid address "%s"' % addr)
+ValueError: Invalid address "['Myoussef@lkmconstruction.com', 'quantumcoresoftware1@gmail.com']"
+Not Found: /favicon.ico
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1807, in get_mailbox
+    token, value = get_name_addr(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1783, in get_name_addr
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected name-addr but found '['Myoussef@lkmconstruction.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1472, in get_local_part
+    token, value = get_dot_atom(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1381, in get_dot_atom
+    token, value = get_dot_atom_text(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1350, in get_dot_atom_text
+    raise errors.HeaderParseError("expected atom at a start of "
+email.errors.HeaderParseError: expected atom at a start of dot-atom-text but found '['Myoussef@lkmconstruction.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1810, in get_mailbox
+    token, value = get_addr_spec(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1656, in get_addr_spec
+    token, value = get_local_part(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1475, in get_local_part
+    token, value = get_word(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1414, in get_word
+    raise errors.HeaderParseError("Expected 'atom' or 'quoted-string' "
+email.errors.HeaderParseError: Expected 'atom' or 'quoted-string' but found '['Myoussef@lkmconstruction.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/message.py", line 87, in sanitize_address
+    token, rest = parser.get_mailbox(addr)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1812, in get_mailbox
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected mailbox but found '['Myoussef@lkmconstruction.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hightech/project22.quantumcoresoftware.com/home/main/views.py", line 25, in index
+    send_mail(
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/__init__.py", line 92, in send_mail
+    return mail.send()
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 136, in send_messages
+    sent = self._send(message)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 150, in _send
+    recipients = [
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 151, in <listcomp>
+    sanitize_address(addr, encoding) for addr in email_message.recipients()
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/message.py", line 89, in sanitize_address
+    raise ValueError('Invalid address "%s"' % addr)
+ValueError: Invalid address "['Myoussef@lkmconstruction.com']"
+Not Found: /favicon.ico
+Internal Server Error: /
+Traceback (most recent call last):
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1807, in get_mailbox
+    token, value = get_name_addr(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1783, in get_name_addr
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected name-addr but found '['sahkhushi946@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1472, in get_local_part
+    token, value = get_dot_atom(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1381, in get_dot_atom
+    token, value = get_dot_atom_text(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1350, in get_dot_atom_text
+    raise errors.HeaderParseError("expected atom at a start of "
+email.errors.HeaderParseError: expected atom at a start of dot-atom-text but found '['sahkhushi946@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1810, in get_mailbox
+    token, value = get_addr_spec(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1656, in get_addr_spec
+    token, value = get_local_part(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1475, in get_local_part
+    token, value = get_word(value)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1414, in get_word
+    raise errors.HeaderParseError("Expected 'atom' or 'quoted-string' "
+email.errors.HeaderParseError: Expected 'atom' or 'quoted-string' but found '['sahkhushi946@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/message.py", line 87, in sanitize_address
+    token, rest = parser.get_mailbox(addr)
+  File "/opt/alt/python310/lib64/python3.10/email/_header_value_parser.py", line 1812, in get_mailbox
+    raise errors.HeaderParseError(
+email.errors.HeaderParseError: expected mailbox but found '['sahkhushi946@gmail.com']'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/handlers/exception.py", line 55, in inner
+    response = get_response(request)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/handlers/base.py", line 197, in _get_response
+    response = wrapped_callback(request, *callback_args, **callback_kwargs)
+  File "/home/hightech/project22.quantumcoresoftware.com/home/main/views.py", line 25, in index
+    send_mail(
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/__init__.py", line 92, in send_mail
+    return mail.send()
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/message.py", line 307, in send
+    return self.get_connection(fail_silently).send_messages([self])
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 136, in send_messages
+    sent = self._send(message)
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 150, in _send
+    recipients = [
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/backends/smtp.py", line 151, in <listcomp>
+    sanitize_address(addr, encoding) for addr in email_message.recipients()
+  File "/home/hightech/virtualenv/project22.quantumcoresoftware.com/home/3.10/lib/python3.10/site-packages/django/core/mail/message.py", line 89, in sanitize_address
+    raise ValueError('Invalid address "%s"' % addr)
+ValueError: Invalid address "['sahkhushi946@gmail.com']"
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
+Not Found: /favicon.ico
