@@ -1,9 +1,53 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
+from django.contrib import messages
+from django.core.mail import send_mail
+from django.conf import settings
+from .forms import ProjectForm
 
 # Create your views here.
 
 def index(request):
-    return render(request,"main/index.html")
+    if request.method == 'POST':
+        form = ProjectForm(request.POST)
+        if form.is_valid():
+            # 1. Save to the Project list database
+            project = form.save()
+            
+            # 2. Extract cleaned data for emails
+            name = form.cleaned_data['name']
+            user_email = form.cleaned_data['email']
+            project_type = form.cleaned_data['project_type']
+            goals = form.cleaned_data['goals']
+            
+            # 3. Send Email to Admin
+            admin_subject = f"New Project Request: {project_type}"
+            admin_message = f"You received a new request from {name} ({user_email}).\n\nProject Type: {project_type}\nGoals:\n{goals}"
+            send_mail(
+                admin_subject,
+                admin_message,
+                settings.DEFAULT_FROM_EMAIL,
+                settings.ADMIN_EMAIL, # Make sure to add ADMIN_EMAIL in settings.py
+                fail_silently=False,
+            )
+            
+            # 4. Send Confirmation Email to the User
+            user_subject = "We received your project request!"
+            user_message = f"Hi {name},\n\nThank you for reaching out to LKM Construction. We have received your request regarding '{project_type}' and our team will get back to you shortly.\n\nBest regards,\nLKM Construction Team"
+            send_mail(
+                user_subject,
+                user_message,
+                settings.DEFAULT_FROM_EMAIL,
+                [user_email],
+                fail_silently=False,
+            )
+            
+            # 5. Add success message and redirect to the #contact anchor link
+            messages.success(request, "Your request has been submitted successfully! We will get back to you shortly.")
+            return redirect('/#contact') 
+    else:
+        form = ProjectForm()
+        
+    return render(request, 'main/index.html', {'form': form})
 
 def about(request):
     return render(request,"main/about.html")
@@ -15,7 +59,49 @@ def project(request):
     return render(request,"main/project.html")
 
 def contact(request):
-    return render(request,"main/contact.html")
+    if request.method == 'POST':
+        # 1. Bind POST data to your ModelForm
+        form = ProjectForm(request.POST)
+        if form.is_valid():
+            # 2. Save entry to your database project list
+            project = form.save()
+            
+            # 3. Extract the clean data matching the new form field names
+            name = form.cleaned_data['name']
+            user_email = form.cleaned_data['email']
+            subject = form.cleaned_data.get('subject', 'General Inquiry')
+            message_content = form.cleaned_data['message']
+            
+            # 4. Notify Admin
+            admin_subject = f"Consultation Request: {subject}"
+            admin_message = f"New consultation inquiry received from {name} ({user_email}).\n\nProject Type/Subject: {subject}\nMessage:\n{message_content}"
+            send_mail(
+                admin_subject,
+                admin_message,
+                settings.DEFAULT_FROM_EMAIL,
+                settings.ADMIN_EMAIL,  # Passed directly without duplicate [] list wrappers
+                fail_silently=False,
+            )
+            
+            # 5. Confirm submission receipt to User
+            user_msg_subject = "Consultation Request Received"
+            user_msg_body = f"Hi {name},\n\nThank you for reaching out to LKM Construction. We have successfully received your inquiry regarding '{subject}'. Our engineering team will review your project details and get back to you within 24 hours.\n\nBest regards,\nLKM Construction Team"
+            send_mail(
+                user_msg_subject,
+                user_msg_body,
+                settings.DEFAULT_FROM_EMAIL,
+                [user_email],
+                fail_silently=False,
+            )
+            
+            # 6. Push message feedback and point user back to anchor
+            messages.success(request, "Your consultation request was submitted successfully! Our team will contact you shortly.")
+            return redirect('contact')  # Redirects clean, matching url name configuration
+            
+    else:
+        form = ProjectForm()
+        
+    return render(request, "main/contact.html", {'form': form})
 
 def area_we_serve(request):
     return render(request,"main/area_we_serve.html")
