@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Garage Specific UI Theme */
+    .garage-hero {
+        background: linear-gradient(rgba(18, 20, 22, 0.72), rgba(18, 20, 22, 0.72)), 
+                    url('{% static "img/garage-detail.jpg" %}') no-repeat center center;
+        background-size: cover;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Luxury Structure Grid Layout */
+    .garage-feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 0; /* Continuous block signature design structure */
+        background: var(--platinum, #e2e8f0);
+    }
+
+    .garage-card {
+        background: var(--white, #ffffff);
+        padding: 60px 40px;
+        border-right: 1px solid #edf2f7;
+        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .garage-card:last-child {
+        border-right: none;
+    }
+
+    .garage-card:hover {
+        background: var(--obsidian, #121416);
+        color: var(--white, #ffffff);
+    }
+
+    .garage-card i {
+        font-size: 3rem;
+        color: var(--bronze, #a37c3f);
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    /* Structural Engineering Section */
+    .enclosure-section {
+        padding: 100px 0;
+        background: var(--obsidian, #121416);
+        color: var(--white, #ffffff);
+        overflow: hidden;
+    }
+
+    .structure-layer {
+        position: relative;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 30px;
+    }
+
+    .structure-layer:last-child { 
+        border: none; 
+    }
+
+    .structure-title {
+        color: var(--bronze, #a37c3f);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    /* Execution Precision Badges */
+    .garage-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: var(--platinum, #e2e8f0);
+        color: var(--obsidian, #121416);
+        font-weight: 700;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    }
+
+    /* Responsive Device Refinements */
+    @media (max-width: 991.98px) {
+        .garage-hero {
+            height: auto;
+            padding: 100px 0;
+        }
+        .garage-card {
+            border-right: none;
+            border-bottom: 1px solid #edf2f7;
+        }
+        .enclosure-section {
+            padding: 60px 0;
+        }
+    }
+</style>
+
+<section class="garage-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <span class="gc-badge">Elite Automotive Enclosures & Studios</span>
+                <h1 class="text-white">Custom <br><span class="text-bronze">Luxury Garages & Additions</span></h1>
+                <p class="text-platinum lead">Elevating automotive storage into architectural landmarks. We design and construct premium detached or attached garages featuring structural framing, commercial-grade slab drops, and bespoke layouts.</p>
+                <div class="mt-4">
+                    <a href="#systems" class="btn-bronze">Explore Systems</a>
+                    <a href="tel:9734207684" class="btn-outline-platinum">Request Consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="systems">
+    <div class="garage-feature-grid">
+        <div class="garage-card text-center">
+            <i class="fas fa-car"></i>
+            <h3>Custom Structures & Additions</h3>
+            <p>Monolithic foundation footprints, heavy stick-built timber framing, and exterior facade integration built to match your main estate styling perfectly.</p>
+        </div>
+        <div class="garage-card text-center">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Industrial Epoxy Finishes</h3>
+            <p>Multi-layer, high-solids polyaspartic and epoxy floor coatings formulated to deflect harsh chemical spills, hot-tire lifts, and physical impacts.</p>
+        </div>
+        <div class="garage-card text-center">
+            <i class="fas fa-warehouse"></i>
+            <h3>Smart High-Lift Doors</h3>
+            <p>Architectural glass or custom timber overhead garage doors equipped with low-clearance wall-mount smart operators and smart access paths.</p>
+        </div>
+    </div>
+</section>
+
+<section class="enclosure-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="text-white mb-5">Uncompromising <span class="text-bronze">Structural Framing</span></h2>
+                
+                <div class="structure-layer">
+                    <span class="structure-title">01. Monolithic Engineered Slab</span>
+                    <p>Thickened edge continuous concrete foundations reinforced with premium rebar grids, built specifically to carry heavy vehicle or hydraulic lift loads.</p>
+                </div>
+                <div class="structure-layer">
+                    <span class="structure-title">02. Micro-Climate Control Layouts</span>
+                    <p>Advanced continuous insulation, dedicated high-CFM exhaust systems, and smart mini-split integrations keeping your vehicle assets safe year-round.</p>
+                </div>
+                <div class="structure-layer">
+                    <span class="structure-title">03. High-Load Utility Rough-Ins</span>
+                    <p>Dedicated high-amperage subpanels mapped seamlessly for level-2 EV rapid chargers, commercial tool arrays, and architectural overhead light traces.</p>
+                </div>
+
+                <div class="mt-5">
+                    <div class="garage-badge">EV CHARGING READY</div>
+                    <div class="garage-badge">HIGH-LOAD CAPACITY</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="gc-image-block">
+                    <div class="accent-box-bronze" style="right: auto; left: -20px;"></div>
+                    <img src="{% static 'img/garage-hero.jpg' %}" alt="Luxury Garage Framing and Concrete Construction Process" class="img-main">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gc-cta">
+    <div class="container">
+        <div class="cta-card">
+            <div class="cta-text">
+                <h2 class="text-white">Expand your estate footprint.</h2>
+                <p class="text-platinum">Partner with our team to draft complete 3D BIM structural layout visualizations and custom space plans.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="tel:9734207684" class="cta-phone"><i class="fas fa-phone-alt"></i> (973) 420-7684</a>
+                <a href="#contact" class="btn-bronze" style="margin-left: 20px;">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
