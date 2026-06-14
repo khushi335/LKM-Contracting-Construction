@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Bathroom Remodeling Specific UI Theme */
+    .bathroom-hero {
+        background: linear-gradient(rgba(18, 20, 22, 0.72), rgba(18, 20, 22, 0.72)), 
+                    url('{% static "img/bathroom-hero.jpg" %}') no-repeat center center;
+        background-size: cover;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Luxury Design Grid Layout */
+    .bathroom-feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 0; /* Continuous block design structure signature */
+        background: var(--platinum, #e2e8f0);
+    }
+
+    .bathroom-card {
+        background: var(--white, #ffffff);
+        padding: 60px 40px;
+        border-right: 1px solid #edf2f7;
+        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .bathroom-card:last-child {
+        border-right: none;
+    }
+
+    .bathroom-card:hover {
+        background: var(--obsidian, #121416);
+        color: var(--white, #ffffff);
+    }
+
+    .bathroom-card i {
+        font-size: 3rem;
+        color: var(--bronze, #a37c3f);
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    /* Craftsmanship Detail Section */
+    .spa-section {
+        padding: 100px 0;
+        background: var(--obsidian, #121416);
+        color: var(--white, #ffffff);
+        overflow: hidden;
+    }
+
+    .craft-layer {
+        position: relative;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 30px;
+    }
+
+    .craft-layer:last-child { 
+        border: none; 
+    }
+
+    .craft-title {
+        color: var(--bronze, #a37c3f);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    /* Execution Precision Badges */
+    .premium-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: var(--platinum, #e2e8f0);
+        color: var(--obsidian, #121416);
+        font-weight: 700;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    }
+
+    /* Responsive Device Refinements */
+    @media (max-width: 991.98px) {
+        .bathroom-hero {
+            height: auto;
+            padding: 100px 0;
+        }
+        .bathroom-card {
+            border-right: none;
+            border-bottom: 1px solid #edf2f7;
+        }
+        .spa-section {
+            padding: 60px 0;
+        }
+    }
+</style>
+
+<section class="bathroom-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <span class="gc-badge">Bespoke Residential Sanctuaries</span>
+                <h1 class="text-white">Custom <br><span class="text-bronze">Luxury Bathroom Remodeling</span></h1>
+                <p class="text-platinum lead">Transforming standard spaces into elite, spa-like escapes. We fuse sophisticated architectural layouts, custom stone masonry, and high-end smart fixtures with flawless technical execution.</p>
+                <div class="mt-4">
+                    <a href="#systems" class="btn-bronze">Explore Features</a>
+                    <a href="tel:9734207684" class="btn-outline-platinum">Schedule Estimate</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="systems">
+    <div class="bathroom-feature-grid">
+        <div class="bathroom-card text-center">
+            <i class="fas fa-shower"></i>
+            <h3>Custom Walk-In Showers</h3>
+            <p>Schluter-certified zero-threshold custom pans, floor-to-ceiling bookmatched marble slabs, and rainfall multifunction body sprays.</p>
+        </div>
+        <div class="bathroom-card text-center">
+            <i class="fas fa-gem"></i>
+            <h3>Premium Vanities & Stone</h3>
+            <p>Tailored quartz counters, floating solid timber millwork configurations, and back-lit ambient LED floating mirror integrations.</p>
+        </div>
+        <div class="bathroom-card text-center">
+            <i class="fas fa-bath"></i>
+            <h3>Freestanding Soaking Tubs</h3>
+            <p>Elegant focal points featuring high-flow floor-mounted copper or matte black filler arrays for an uncompromised bathing experience.</p>
+        </div>
+    </div>
+</section>
+
+<section class="spa-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="text-white mb-5">Impeccable <span class="text-bronze">Moisture Engineering</span></h2>
+                
+                <div class="craft-layer">
+                    <span class="craft-title">01. 100% Waterproof Enclosures</span>
+                    <p>We deploy advanced multi-ply topical membranes on all shower framing fields, completely eliminating mold potential and structural water leaching paths.</p>
+                </div>
+                <div class="craft-layer">
+                    <span class="craft-title">02. Precise Sloping & Drainage</span>
+                    <p>Precision deck-mud mortar sloping down to integrated linear slot drains, guaranteeing optimal velocity water exit profiles.</p>
+                </div>
+                <div class="craft-layer">
+                    <span class="craft-title">03. In-Floor Thermal Comfort</span>
+                    <p>Smart low-voltage programmable radiant floor heating networks laid cleanly beneath tile layouts for exceptional winter climate comfort.</p>
+                </div>
+
+                <div class="mt-5">
+                    <div class="premium-badge">SCHLUTER CERTIFIED</div>
+                    <div class="premium-badge">ANTI-MICROBIAL SURFACES</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="gc-image-block">
+                    <div class="accent-box-bronze" style="right: auto; left: -20px;"></div>
+                    <img src="{% static 'img/bathroom-detail.jpg' %}" alt="Luxury Bathroom Tile Renovation Construction Process" class="img-main">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gc-cta">
+    <div class="container">
+        <div class="cta-card">
+            <div class="cta-text">
+                <h2 class="text-white">Elevate your daily environment.</h2>
+                <p class="text-platinum">Partner with our elite design-build team to review custom layout renderings and high-end material boards.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="tel:9734207684" class="cta-phone"><i class="fas fa-phone-alt"></i> (973) 420-7684</a>
+                <a href="#contact" class="btn-bronze" style="margin-left: 20px;">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
