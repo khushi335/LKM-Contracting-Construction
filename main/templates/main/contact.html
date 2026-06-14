@@ -14,16 +14,24 @@
     </div>
 </div>
 
-<div class="container-fluid py-6 px-5">
+<div id="contact" class="container-fluid py-6 px-5">
     <div class="container">
         <div class="row g-5">
-            <!-- Contact Form Side -->
             <div class="col-lg-7">
                 <h6 class="text-bronze text-uppercase fw-bold mb-3" style="letter-spacing: 5px;">Inquiry</h6>
                 <h1 class="display-5 text-uppercase mb-4">Request A <span class="text-outline-dark">Consultation</span></h1>
                 <p class="mb-5">Ready to start your next project in New York or New Jersey? Fill out the form below and our engineering team will get back to you within 24 hours.</p>
                 
-                <form action="{% url 'contact' %}" method="POST" class="contact-form">
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+                
+                <form action="{% url 'contact' %}#contact" method="POST" class="contact-form">
                     {% csrf_token %}
                     <div class="row g-3">
                         <div class="col-md-6">
@@ -57,7 +65,6 @@
                 </form>
             </div>
 
-            <!-- Contact Info Side -->
             <div class="col-lg-5">
                 <div class="contact-info-card bg-obsidian text-white p-5 shadow-lg h-100">
                     <h3 class="text-uppercase fw-bold mb-4 pb-2 border-bottom border-bronze">Office Info</h3>

@@ -161,7 +161,7 @@
         <div class="col-lg-5">
             <div class="position-relative h-100">
                 <!-- Main Image -->
-                <img class="img-fluid w-100 rounded-0 shadow-lg" src="{% static 'img/lkm.jpg' %}" alt="LKM Construction Site" style="object-fit: cover; min-height: 500px;">
+                <img class="img-fluid w-100 rounded-0 shadow-lg" src="{% static 'img/about_lkm.jpg' %}" alt="LKM Construction Site" style="object-fit: cover; min-height: 500px;">
                 <!--<img class="img-fluid w-100 rounded-0 shadow-lg" src="{% static 'img/about-main.jpg' %}" alt="LKM Construction Site" style="object-fit: cover; min-height: 500px;">-->
                 
                 <!-- Floating Experience Badge -->
@@ -768,26 +768,36 @@
 <!-- Areas We Serve End -->
 
 <!-- Contact Start -->
-<div class="container-fluid py-6 px-5 bg-light">
+<div id="contact" class="container-fluid py-6 px-5 bg-light">
     <div class="container">
         <div class="row g-0 shadow-lg bg-white rounded overflow-hidden">
-            <!-- Left Side: The Form -->
             <div class="col-lg-7 p-5">
                 <h6 class="text-bronze text-uppercase fw-bold mb-3" style="letter-spacing: 3px;">Get In Touch</h6>
                 <h1 class="display-5 text-uppercase mb-4">Have an Upcoming <span class="text-bronze">Project?</span></h1>
-                <form>
+                
+                {% if messages %}
+                    {% for message in messages %}
+                        <div class="alert alert-{{ message.tags }} alert-dismissible fade show" role="alert">
+                            {{ message }}
+                            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close"></button>
+                        </div>
+                    {% endfor %}
+                {% endif %}
+
+                <form method="POST" action="{% url 'index' %}#contact">
+                    {% csrf_token %}
                     <div class="row g-3">
                         <div class="col-md-6">
-                            <input type="text" class="form-control custom-input py-3" placeholder="Your Name">
+                            <input type="text" name="name" class="form-control custom-input py-3" placeholder="Your Name" required>
                         </div>
                         <div class="col-md-6">
-                            <input type="email" class="form-control custom-input py-3" placeholder="Your Email">
+                            <input type="email" name="email" class="form-control custom-input py-3" placeholder="Your Email" required>
                         </div>
                         <div class="col-12">
-                            <input type="text" class="form-control custom-input py-3" placeholder="Project Type (e.g. Roofing, Masonry)">
+                            <input type="text" name="project_type" class="form-control custom-input py-3" placeholder="Project Type (e.g. Roofing, Masonry)" required>
                         </div>
                         <div class="col-12">
-                            <textarea class="form-control custom-input py-3" rows="4" placeholder="Briefly describe your project goals"></textarea>
+                            <textarea name="goals" class="form-control custom-input py-3" rows="4" placeholder="Briefly describe your project goals" required></textarea>
                         </div>
                         <div class="col-12">
                             <button class="btn btn-obsidian w-100 py-3 text-uppercase fw-bold" type="submit">Submit Request</button>
@@ -796,7 +806,6 @@
                 </form>
             </div>
 
-            <!-- Right Side: Contact Info -->
             <div class="col-lg-5 bg-obsidian p-5 text-white d-flex flex-column justify-content-center">
                 <h3 class="text-uppercase fw-bold mb-5 pb-3 border-bottom border-secondary">Contact <span class="text-bronze">Details</span></h3>
                 
