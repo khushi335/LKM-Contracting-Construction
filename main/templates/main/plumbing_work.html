@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Plumbing Specific UI Theme */
+    .plumbing-hero {
+        background: linear-gradient(rgba(18, 20, 22, 0.75), rgba(18, 20, 22, 0.75)), 
+                    url('{% static "img/plumbing-hero.jpg" %}') no-repeat center center;
+        background-size: cover;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Hydraulic Grid Layout */
+    .plumbing-feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 0; /* Continuous block signature transition */
+        background: var(--platinum, #e2e8f0);
+    }
+
+    .plumbing-card {
+        background: var(--white, #ffffff);
+        padding: 60px 40px;
+        border-right: 1px solid #edf2f7;
+        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .plumbing-card:last-child {
+        border-right: none;
+    }
+
+    .plumbing-card:hover {
+        background: var(--obsidian, #121416);
+        color: var(--white, #ffffff);
+    }
+
+    .plumbing-card i {
+        font-size: 3rem;
+        color: var(--bronze, #a37c3f);
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    /* Hydraulic Infrastructure Section */
+    .infrastructure-section {
+        padding: 100px 0;
+        background: var(--obsidian, #121416);
+        color: var(--white, #ffffff);
+        overflow: hidden;
+    }
+
+    .system-layer {
+        position: relative;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 30px;
+    }
+
+    .system-layer:last-child { 
+        border: none; 
+    }
+
+    .system-title {
+        color: var(--bronze, #a37c3f);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    /* Code Compliance Badges */
+    .compliance-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: var(--platinum, #e2e8f0);
+        color: var(--obsidian, #121416);
+        font-weight: 700;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    }
+
+    /* Responsive Grid Breakpoints */
+    @media (max-width: 991.98px) {
+        .plumbing-hero {
+            height: auto;
+            padding: 100px 0;
+        }
+        .plumbing-card {
+            border-right: none;
+            border-bottom: 1px solid #edf2f7;
+        }
+        .infrastructure-section {
+            padding: 60px 0;
+        }
+    }
+</style>
+
+<section class="plumbing-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <span class="gc-badge">High-Integrity Hydraulic Networks</span>
+                <h1 class="text-white">Advanced <br><span class="text-bronze">Mechanical & Piping Systems</span></h1>
+                <p class="text-platinum lead">Flawless execution of critical infrastructure. From high-capacity commercial supply lines to precision custom residential distribution networks, we build systems optimized for life.</p>
+                <div class="mt-4">
+                    <a href="#systems" class="btn-bronze">Explore Services</a>
+                    <a href="tel:9734207684" class="btn-outline-platinum">Emergency Service</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="systems">
+    <div class="plumbing-feature-grid">
+        <div class="plumbing-card text-center">
+            <i class="fas fa-tools"></i>
+            <h3>Commercial & Main Piping</h3>
+            <p>Heavy-duty copper, PEX, and cast-iron distribution runs engineered to handle major utility loads and municipal configurations.</p>
+        </div>
+        <div class="plumbing-card text-center">
+            <i class="fas fa-faucet"></i>
+            <h3>Luxury Rough-Ins</h3>
+            <p>Architect-specified precision rough-in frameworks designed for sleek drop-ins, floating vanities, and high-end kitchen arrays.</p>
+        </div>
+        <div class="plumbing-card text-center">
+            <i class="fas fa-hot-tub"></i>
+            <h3>Water Heating & Management</h3>
+            <p>Smart, high-efficiency tankless water heaters, pressure regulators, and custom backflow prevention mechanisms.</p>
+        </div>
+    </div>
+</section>
+
+<section class="infrastructure-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="text-white mb-5">Built for Zero <span class="text-bronze">Fault Performance</span></h2>
+                
+                <div class="system-layer">
+                    <span class="system-title">01. Premium Structural Material</span>
+                    <p>We source only graded Type L copper and commercial multi-layer cross-linked polyethylene (PEX) for absolute structural integrity.</p>
+                </div>
+                <div class="system-layer">
+                    <span class="system-title">02. Pressure Balanced Flow</span>
+                    <p>Every dynamic flow network is precisely calibrated to distribute optimal fluid pressure evenly across all multi-story layouts.</p>
+                </div>
+                <div class="system-layer">
+                    <span class="system-title">03. Smart Drainage & Venting</span>
+                    <p>Advanced DWV (Drain-Waste-Vent) system paths designed meticulously to eliminate acoustic noise and hazardous air traps.</p>
+                </div>
+
+                <div class="mt-5">
+                    <div class="compliance-badge">UPC COMPLIANT</div>
+                    <div class="compliance-badge">PRESSURE TEST REPORTED</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="gc-image-block">
+                    <div class="accent-box-bronze" style="right: auto; left: -20px;"></div>
+                    <img src="{% static 'img/plumbing-detail.jpg' %}" alt="Industrial Plumbing Network Framework" class="img-main">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gc-cta">
+    <div class="container">
+        <div class="cta-card">
+            <div class="cta-text">
+                <h2 class="text-white">Secure your property infrastructure.</h2>
+                <p class="text-platinum">Contact our elite mechanical engineering team for project consultation blueprints.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="tel:9734207684" class="cta-phone"><i class="fas fa-phone-alt"></i> (973) 420-7684</a>
+                <a href="#contact" class="btn-bronze" style="margin-left: 20px;">Request Quote</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
