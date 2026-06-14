@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Gutter & Water Management Specific UI Theme */
+    .gutter-hero {
+        background: linear-gradient(rgba(18, 20, 22, 0.75), rgba(18, 20, 22, 0.75)), 
+                    url('{% static "img/gutter-hero.jpg" %}') no-repeat center center;
+        background-size: cover;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Hydraulic Management Grid Layout */
+    .gutter-feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 0; /* Signature seamless structural block design pattern */
+        background: var(--platinum, #e2e8f0);
+    }
+
+    .gutter-card {
+        background: var(--white, #ffffff);
+        padding: 60px 40px;
+        border-right: 1px solid #edf2f7;
+        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .gutter-card:last-child {
+        border-right: none;
+    }
+
+    .gutter-card:hover {
+        background: var(--obsidian, #121416);
+        color: var(--white, #ffffff);
+    }
+
+    .gutter-card i {
+        font-size: 3rem;
+        color: var(--bronze, #a37c3f);
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    /* Rain Management Layered Flow Section */
+    .drainage-section {
+        padding: 100px 0;
+        background: var(--obsidian, #121416);
+        color: var(--white, #ffffff);
+        overflow: hidden;
+    }
+
+    .drainage-layer {
+        position: relative;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 30px;
+    }
+
+    .drainage-layer:last-child { 
+        border: none; 
+    }
+
+    .layer-title {
+        color: var(--bronze, #a37c3f);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    /* Drainage Performance Badges */
+    .drainage-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: var(--platinum, #e2e8f0);
+        color: var(--obsidian, #121416);
+        font-weight: 700;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    }
+
+    /* Device Viewport Scaling Overrides */
+    @media (max-width: 991.98px) {
+        .gutter-hero {
+            height: auto;
+            padding: 100px 0;
+        }
+        .gutter-card {
+            border-right: none;
+            border-bottom: 1px solid #edf2f7;
+        }
+        .drainage-section {
+            padding: 60px 0;
+        }
+    }
+</style>
+
+<section class="gutter-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <span class="gc-badge">High-Capacity Structural Drainage</span>
+                <h1 class="text-white">Seamless <br><span class="text-bronze">Gutter & Water Management</span></h1>
+                <p class="text-platinum lead">Deflecting foundation failures at the roofline. We craft heavy-gauge, custom-extruded seamless gutter networks engineered to divert extreme Northeast rain volumes away from your perimeter footprint.</p>
+                <div class="mt-4">
+                    <a href="#systems" class="btn-bronze">Explore Systems</a>
+                    <a href="tel:9734207684" class="btn-outline-platinum">Request Consultation</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="systems">
+    <div class="gutter-feature-grid">
+        <div class="gutter-card text-center">
+            <i class="fas fa-water"></i>
+            <h3>Seamless K-Style & Half-Round</h3>
+            <p>On-site extruded heavy copper or aluminum profiles eliminate structural leak seams completely for lasting aesthetic appeal.</p>
+        </div>
+        <div class="gutter-card text-center">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Premium Micro-Mesh Guards</h3>
+            <p>Advanced structural leaf filters blocking organic pine needles and debris while accepting high-velocity rainfall cascades.</p>
+        </div>
+        <div class="gutter-card text-center">
+            <i class="fas fa-compress-arrows-alt"></i>
+            <h3>Oversized Downspouts</h3>
+            <p>High-volume commercial grade 3x4 downspouts engineered to flush toxic ice dam build-up and heavy water volumes instantly.</p>
+        </div>
+    </div>
+</section>
+
+<section class="drainage-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="text-white mb-5">Architectural Perimeter <span class="text-bronze">Protection</span></h2>
+                
+                <div class="drainage-layer">
+                    <span class="layer-title">01. Dynamic Flow Sloping</span>
+                    <p>Laser-level calculated grade lines that drop precisely toward downspout paths, completely mitigating standing water pockets.</p>
+                </div>
+                <div class="drainage-layer">
+                    <span class="layer-title">02. Heavy-Duty Fascia Anchoring</span>
+                    <p>Internal structural hidden hangers secured directly into roof rafters using heavy stainless steel screws every 18 inches.</p>
+                </div>
+                <div class="drainage-layer">
+                    <span class="layer-title">03. Sub-Grade Diversion Integration</span>
+                    <p>Flawless adaptation to underground drainage bubbler configurations to run surface stormwater clean out of structural range.</p>
+                </div>
+
+                <div class="mt-5">
+                    <div class="drainage-badge">SEAMLESS EXTRUSION</div>
+                    <div class="drainage-badge">RUST-FREE COPPER & ALUM</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="gc-image-block">
+                    <div class="accent-box-bronze" style="right: auto; left: -20px;"></div>
+                    <img src="{% static 'img/gutter-detail.jpg' %}" alt="Seamless Gutter Extrusion and Roof Flashing Fitting" class="img-main">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gc-cta">
+    <div class="container">
+        <div class="cta-card">
+            <div class="cta-text">
+                <h2 class="text-white">Secure your building foundation.</h2>
+                <p class="text-platinum">Reach out to our external water management division for an on-site perimeter footprint inspection or certified quotation.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="tel:9734207684" class="cta-phone"><i class="fas fa-phone-alt"></i> (973) 420-7684</a>
+                <a href="#contact" class="btn-bronze" style="margin-left: 20px;">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
