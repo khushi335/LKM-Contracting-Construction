@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Design & Build Specific UI Theme */
+    .design-hero {
+        background: linear-gradient(rgba(18, 20, 22, 0.72), rgba(18, 20, 22, 0.72)), 
+                    url('{% static "img/design-build-hero.jpg" %}') no-repeat center center;
+        background-size: cover;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Architectural Phase Grid */
+    .design-feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 0; /* Signature seamless multi-block grid */
+        background: var(--platinum, #e2e8f0);
+    }
+
+    .design-card {
+        background: var(--white, #ffffff);
+        padding: 60px 40px;
+        border-right: 1px solid #edf2f7;
+        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .design-card:last-child {
+        border-right: none;
+    }
+
+    .design-card:hover {
+        background: var(--obsidian, #121416);
+        color: var(--white, #ffffff);
+    }
+
+    .design-card i {
+        font-size: 3rem;
+        color: var(--bronze, #a37c3f);
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    /* Turnkey Methodology Section */
+    .methodology-section {
+        padding: 100px 0;
+        background: var(--obsidian, #121416);
+        color: var(--white, #ffffff);
+        overflow: hidden;
+    }
+
+    .phase-layer {
+        position: relative;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 30px;
+    }
+
+    .phase-layer:last-child { 
+        border: none; 
+    }
+
+    .phase-title {
+        color: var(--bronze, #a37c3f);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    /* Process Engineering Badges */
+    .process-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: var(--platinum, #e2e8f0);
+        color: var(--obsidian, #121416);
+        font-weight: 700;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    }
+
+    /* Device Responsive Scaling */
+    @media (max-width: 991.98px) {
+        .design-hero {
+            height: auto;
+            padding: 100px 0;
+        }
+        .design-card {
+            border-right: none;
+            border-bottom: 1px solid #edf2f7;
+        }
+        .methodology-section {
+            padding: 60px 0;
+        }
+    }
+</style>
+
+<section class="design-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <span class="gc-badge">Elite Architectural Concept to Reality</span>
+                <h1 class="text-white">Turnkey <br><span class="text-bronze">Design & Build Modern Residential</span></h1>
+                <p class="text-platinum lead">A unified, elite master execution pathway. We unite award-winning concept drafting, schematic architectural planning, and high-performance master construction under a single contract.</p>
+                <div class="mt-4">
+                    <a href="#systems" class="btn-bronze">Our Methodology</a>
+                    <a href="tel:9734207684" class="btn-outline-platinum">Consult Architect</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="systems">
+    <div class="design-feature-grid">
+        <div class="design-card text-center">
+            <i class="fas fa-pencil-ruler"></i>
+            <h3>01. Concept & Feasibility</h3>
+            <p>Advanced space orchestration, 3D architectural modeling, and zoning verification blueprints customized to your plot asset.</p>
+        </div>
+        <div class="design-card text-center">
+            <i class="fas fa-file-signature"></i>
+            <h3>02. Integrated Budgeting</h3>
+            <p>Pre-construction cost analysis executed concurrently with design variations to secure precision estimates without scope creep.</p>
+        </div>
+        <div class="design-card text-center">
+            <i class="fas fa-hard-hat"></i>
+            <h3>03. Master Construction</h3>
+            <p>Seamless execution overseen directly by your designing engineers, guaranteeing aesthetic integrity from ground-break to turnover.</p>
+        </div>
+    </div>
+</section>
+
+<section class="methodology-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="text-white mb-5">Single-Source <span class="text-bronze">Accountability Advantage</span></h2>
+                
+                <div class="phase-layer">
+                    <span class="phase-title">Cohesive Value Engineering</span>
+                    <p>By overlapping the design and building timelines, we identify structural cost savings early, cutting conventional delivery lag times up to 30%.</p>
+                </div>
+                <div class="phase-layer">
+                    <span class="phase-title">Eliminated Friction Points</span>
+                    <p>No finger-pointing between independent architects and remote general contractors. We take 100% total systemic ownership of the build cycle.</p>
+                </div>
+                <div class="phase-layer">
+                    <span class="phase-title">BIM Structural Mapping</span>
+                    <p>Every structural footprint leverages rigorous Building Information Modeling data to eliminate multi-layer piping or layout clashes prior to framing.</p>
+                </div>
+
+                <div class="mt-5">
+                    <div class="process-badge">3D BIM RENDERING</div>
+                    <div class="process-badge">FAST-TRACK DELIVERY</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="gc-image-block">
+                    <div class="accent-box-bronze" style="right: auto; left: -20px;"></div>
+                    <img src="{% static 'img/design-build-detail.jpg' %}" alt="Architect Planning Layout Schemes with Blueprint Schematics" class="img-main">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gc-cta">
+    <div class="container">
+        <div class="cta-card">
+            <div class="cta-text">
+                <h2 class="text-white">Visualize your master estate.</h2>
+                <p class="text-platinum">Schedule an elite architectural discovery session and land asset appraisal with our engineering group.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="tel:9734207684" class="cta-phone"><i class="fas fa-phone-alt"></i> (973) 420-7684</a>
+                <a href="#contact" class="btn-bronze" style="margin-left: 20px;">Initiate Project</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
