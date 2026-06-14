@@ -1,0 +1,188 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<style>
+    /* Fire Safety Specific UI Theme */
+    .fire-hero {
+        background: linear-gradient(rgba(18, 20, 22, 0.78), rgba(18, 20, 22, 0.78)), 
+                    url('{% static "img/fire-alarm-hero.jpg" %}') no-repeat center center;
+        background-size: cover;
+        height: 75vh;
+        display: flex;
+        align-items: center;
+    }
+
+    /* Life Safety Grid Layout */
+    .fire-feature-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+        gap: 0; /* Signature seamless structural tile layout */
+        background: var(--platinum, #e2e8f0);
+    }
+
+    .fire-card {
+        background: var(--white, #ffffff);
+        padding: 60px 40px;
+        border-right: 1px solid #edf2f7;
+        transition: 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+
+    .fire-card:last-child {
+        border-right: none;
+    }
+
+    .fire-card:hover {
+        background: var(--obsidian, #121416);
+        color: var(--white, #ffffff);
+    }
+
+    .fire-card i {
+        font-size: 3rem;
+        color: var(--bronze, #a37c3f);
+        margin-bottom: 25px;
+        display: block;
+    }
+
+    /* System Integration Section */
+    .safety-section {
+        padding: 100px 0;
+        background: var(--obsidian, #121416);
+        color: var(--white, #ffffff);
+        overflow: hidden;
+    }
+
+    .safety-layer {
+        position: relative;
+        padding-bottom: 30px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        margin-bottom: 30px;
+    }
+
+    .safety-layer:last-child { 
+        border: none; 
+    }
+
+    .safety-title {
+        color: var(--bronze, #a37c3f);
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+    }
+
+    /* NFPA Code Badges */
+    .nfpa-badge {
+        display: inline-flex;
+        align-items: center;
+        padding: 10px 20px;
+        background: var(--platinum, #e2e8f0);
+        color: var(--obsidian, #121416);
+        font-weight: 700;
+        margin-right: 15px;
+        margin-bottom: 15px;
+        clip-path: polygon(10% 0%, 100% 0%, 90% 100%, 0% 100%);
+    }
+
+    /* Responsive Layout Refinements */
+    @media (max-width: 991.98px) {
+        .fire-hero {
+            height: auto;
+            padding: 100px 0;
+        }
+        .fire-card {
+            border-right: none;
+            border-bottom: 1px solid #edf2f7;
+        }
+        .safety-section {
+            padding: 60px 0;
+        }
+    }
+</style>
+
+<section class="fire-hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-8">
+                <span class="gc-badge">Certified Intelligent Life Safety</span>
+                <h1 class="text-white">Advanced <br><span class="text-bronze">Fire Alarm & Detection Networks</span></h1>
+                <p class="text-platinum lead">Absolute protection when every millisecond counts. We engineer, deploy, and configure early-warning smoke, heat, and carbon monoxide defense grids compliant with strict state safety protocols.</p>
+                <div class="mt-4">
+                    <a href="#systems" class="btn-bronze">Explore Systems</a>
+                    <a href="tel:9734207684" class="btn-outline-platinum">Schedule Inspection</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="systems">
+    <div class="fire-feature-grid">
+        <div class="fire-card text-center">
+            <i class="fas fa-exclamation-triangle"></i>
+            <h3>Addressable Control Panels</h3>
+            <p>Smart localized panels pinpointing the exact spot of a thermal event instantly for rapid first-responder routing.</p>
+        </div>
+        <div class="fire-card text-center">
+            <i class="fas fa-radiation"></i>
+            <h3>Photoelectric Detection</h3>
+            <p>High-grade optical array sensors calibrated to track smoldering particles long before active flames materialize.</p>
+        </div>
+        <div class="fire-card text-center">
+            <i class="fas fa-volume-up"></i>
+            <h3>Mass Notification & Audio</h3>
+            <p>Integrated high-decibel audio beacons, synced high-intensity visual strobes, and automated municipal monitoring uplinks.</p>
+        </div>
+    </div>
+</section>
+
+<section class="safety-section">
+    <div class="container">
+        <div class="row align-items-center">
+            <div class="col-lg-6">
+                <h2 class="text-white mb-5">Uncompromising <span class="text-bronze">Life Safety Integration</span></h2>
+                
+                <div class="safety-layer">
+                    <span class="safety-title">01. Continuous Monitoring Uplinks</span>
+                    <p>Dual-path cellular communicator arrays broadcasting redundant signals directly to central monitoring grids without telephone line dependence.</p>
+                </div>
+                <div class="safety-layer">
+                    <span class="safety-title">02. Auxiliary Matrix Interlocking</span>
+                    <p>Intelligent control mapping designed to instantly shut down HVAC systems, close fire doors, and override elevators upon activation.</p>
+                </div>
+                <div class="safety-layer">
+                    <span class="safety-title">03. Heavy-Duty Circuit Protection</span>
+                    <p>Strict application of two-hour fire-rated protective pathways to preserve internal wire metrics during emergency events.</p>
+                </div>
+
+                <div class="mt-5">
+                    <div class="nfpa-badge">NFPA 72 COMPLIANT</div>
+                    <div class="nfpa-badge">UL 864 APPROVED PANEL</div>
+                </div>
+            </div>
+            
+            <div class="col-lg-6 mt-5 mt-lg-0">
+                <div class="gc-image-block">
+                    <div class="accent-box-bronze" style="right: auto; left: -20px;"></div>
+                    <img src="{% static 'img/fire-alarm-detail.jpg' %}" alt="Commercial Fire Alarm Control Panel Wiring" class="img-main">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="gc-cta">
+    <div class="container">
+        <div class="cta-card">
+            <div class="cta-text">
+                <h2 class="text-white">Protect your residents and structures.</h2>
+                <p class="text-platinum">Request an official commercial system compliance design layout or building diagnostic review.</p>
+            </div>
+            <div class="cta-actions">
+                <a href="tel:9734207684" class="cta-phone"><i class="fas fa-phone-alt"></i> (973) 420-7684</a>
+                <a href="#contact" class="btn-bronze" style="margin-left: 20px;">Get Started</a>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}
